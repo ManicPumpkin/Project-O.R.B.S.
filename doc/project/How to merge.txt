@@ -1,0 +1,24 @@
+1. Bist du in deinem branch?
+	Ja: alles cool
+	Nein: gehe mit git checkout <branch_name> in deinen branch
+2. commit deine Änderungen mit git commit -m '<commit-Nachricht>'
+3. pushe deine Änderungen auf github mit git push origin <branch_name>
+
+Jetzt sollte dein branch die Änderungen enthalten, die du in den master branch mergen willst.
+
+4. wechsle mit git checkout master in den master-branch (bzw. in den branch, in den du die Änderungen rein mergen willst)
+5. merge die branches mit git merge <branch_name>
+Es wird immer von <branch_name> in deinen aktuellen brnach gemergt! Also immer vorsichtig sein, dass du es nicht einmal anders herum machst
+
+Es kann sein, dass das mergen nicht funktioniert. Das kann zwei Gründe haben:
+	1. es gibt Konflikte in Dateien, die du mergen willst.
+		Hier musst du die Konflikte selber manuell beheben
+	2. in den master-branch wurden schon Andere commits gemacht, die in deinem lokalen branch noch nicht sind
+		Hier bin ich mir nicht ganz sicher, wie ich es angestellt habe. Das müssen wir dann nochmal ausprobieren, wenn der Fall auftritt
+
+
+Jetzt ist der master-branch auf dem aktuellen stand. Dein dev-branch ist es allerdings eventuell noch nicht, da Dateien, die im Master vorher schon commited wurden, noch nicht in deinem dev-branch sind. Deshalb:
+
+6. wechsle mit git checkout <branch_name> wieder in deinen dev-branch
+Jetzt sollten alle Dateien vom master-branch auf deinem Rechner sein, du bist aber in deinem dev-branch.
+7. pushe mit git push origin <branch_name> alles auf deinen dev-branch und jetzt sollten master und dev auf dem exakt selben Stand sein
