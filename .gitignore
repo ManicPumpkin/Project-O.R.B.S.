@@ -11,3 +11,9 @@
 *.lai
 *.la
 *.a
+
+# LaTex files
+*.aux
+*.toc
+*.aut
+*.gz
