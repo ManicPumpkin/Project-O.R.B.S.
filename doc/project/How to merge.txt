@@ -22,3 +22,11 @@ Jetzt ist der master-branch auf dem aktuellen stand. Dein dev-branch ist es alle
 6. wechsle mit git checkout <branch_name> wieder in deinen dev-branch
 Jetzt sollten alle Dateien vom master-branch auf deinem Rechner sein, du bist aber in deinem dev-branch.
 7. pushe mit git push origin <branch_name> alles auf deinen dev-branch und jetzt sollten master und dev auf dem exakt selben Stand sein
+
+Im einfachsten Fall sollte es also eigentlich nur ein
+	git commit
+	git push
+	git checkout master
+	git merge <branch_name>
+	git checkout <branch_name>
+sein
