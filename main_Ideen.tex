@@ -1,0 +1,41 @@
+\documentclass[a4paper,12pt, titlepage, bibtotoc]{article}
+
+% Sprachencodierung und Silbentrennung
+\usepackage[a4paper, left=3cm, right=2cm, top=3cm, bottom=3cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage{acronym}
+\usepackage{graphicx}
+\usepackage{tocbibind}
+\usepackage{amsmath}
+%\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+
+
+%opening
+\title{Project O.R.B.S.}
+\author{Marco Wilhelm \& Danny Rubner}
+
+\begin{document}
+\pagenumbering{roman}
+
+%Titelseite
+%\maketitle
+%\label{label_section_title}
+
+% Zeilenabstand setzen
+\setlength{\baselineskip}{1\baselineskip}
+
+% Inhaltsverzeichnis
+\tableofcontents
+\label{sec:toc}
+
+% Dokumente
+\newpage
+\input{Inspirationen}
+\input{Ideen}
+
+
+\end{document}
