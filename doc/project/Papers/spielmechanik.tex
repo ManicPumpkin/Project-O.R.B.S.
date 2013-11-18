@@ -14,6 +14,11 @@
 	\end{itemize}
 
 
+\subsection{Story}
+\label{subsec:story}
+Eine Story gibt es nicht. Es werden aber hier und da, den Spieler und das Universum betreffende Fragen gestellt.
+
+
 \subsection{Charakter-Erstellung}
 \label{subsec:charakter-erstellung}
 	\begin{itemize}
@@ -90,18 +95,76 @@
 
 \subsection{Crafting-System}
 \label{subsec:crafting-system}
-%	\begin{itemize}
-%		\item 
-%	\end{itemize}
+Der Spieler kann selber craften, kann es aber von NPCs machen lassen:
+\subsubsection{via Spieler}
+\label{subsubsec:spieler-crafting}
+	\begin{itemize}
+		\item Rohstoffe sammeln
+		\item z.B. Erze am Ofen schmelzen
+		\item Komponenten erstellen (z.B. Griff aus Holz an der Drehbank; Klinge aus Metall am Amboss)
+		\item Produkt (Schwert) aus Komponenten zusammensetzen (z.B. Werkbank)
+	\end{itemize}
+
+\subsubsection{via NPC}
+\label{subsubsec:NPC-crafting}
+
+	\begin{itemize}
+		\item Rohstoffe sammeln kann durch Anweisungen auf NPCs übertragen werden 
+		\subitem Der Weg zu den Rohstoffen muss gegeben sein
+		\subitem Spieler wählt Rohstoff aus Prioritätenliste, der von den NPCs abgebaut werden soll
+		\subitem NPCs bauen also NUR die Rohstoffe ab. Sie legen keine Wege zu den Rohstoffen an.
+		\subitem somit bleibt das `Terraforming' komplett in den Händen des Spielers
+		\item NPCs bringen Rohstoffe zurück in das Lagerhaus, wo die Rohstoffe für andere NPCs zur Verfügung stehen
+		\item NPC Schmied nutzt das vorhandene Eisenerz aus dem Lagerhaus, um Barren herzustellen usw.
+	\end{itemize}
 
 \subsection{Magie-System}
 \label{subsec:magie-system}
 	\begin{itemize}
 		\item da Magie übermächtig ist, muss man sie sich verdienen (lernen, studieren, forschen usw.)
+		\item Spieler besitzt ein Zauberbuch (kein Item, sondern eher ein Menü), indem viele verschieden Zauber zur Verfügung stehen (müssen aber erst irgendwie gelernt werden)
+		\subitem Zauber können aus dem Zauberbuch in die Schnellleiste gezogen und danach gewirkt werden
+		\item Jeder Zauber kann auf verschieden Art und Weise gewirkt werden (ähnlich wie bei Magicka $\rightarrow$ selbes Prinzip bei anderen Kämpfern z.B. Angriff, Blocken, usw.; siehe Kampfsteuerung \ref{subsec:kamp-system})
+		\item Items ändern nur die Stati des Spielers.
+		\item Es wird keine Elemente und Kombinationen aus den Elementen geben (zu viel des Guten)
 	\end{itemize}
 
 \subsection{Kampf-System}
 \label{subsec:kamp-system}
-%	\begin{itemize}
-%		\item 
-%	\end{itemize}
+Verschieden Art und Weisen zu Kämpfen:
+	\begin{itemize}
+		\item Nahkampf
+		\item Fernkampf
+		\item Zauber
+		\item Alchemie
+	\end{itemize}
+
+\paragraph{Kampfsteuerung\\}
+Es gibt 2 Angriffsarten. LMB \& RMB. Man kann zusätzlich Blocken Space.
+\subparagraph{Nahkämpfer}
+\begin{itemize}
+\item LMB Zustechen
+\item RMB schwerer Hieb
+\item Space Parrieren
+\end{itemize}
+
+\subparagraph{Fernkämpfer}
+\begin{itemize}
+\item LMB Schnellschuss (braucht nicht so viel Spannung)
+\item RMB Pierce-Schuss (geht durch Gegner durch; Teilt jedem Schaden aus)
+\item Space Dash (Gewisse Distanz schnell überwinden ohne Schaden zu erleiden)
+\end{itemize}
+
+\subparagraph{Zauberer}
+\begin{itemize}
+\item LMB Angriff 1
+\item RMB Angriff 2
+\item Space Barriere bzw. Schutzzauber
+\end{itemize}
+
+\subparagraph{Alchemist}
+\begin{itemize}
+\item LMB schmeißt Trank (Effekt, je nach Trank)
+\item RMB beschwört Wesen, je nach Trank
+\item Space beschwört Wesen für die Dauer des Tastendrucks direkt vor dem Spieler. Das Wesen steckt den Schaden ein.
+\end{itemize}
