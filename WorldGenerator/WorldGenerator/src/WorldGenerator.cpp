@@ -1,25 +1,27 @@
-// WorldGenerator.cpp : Defines the exported functions for the DLL application.
-//
+/**
+  @file   Unvierse.cpp
+  @brief  contains the function definitions of the class WorldGenerator
+  @author mwilhelm
+  @date   2013-11-27
+**/
 
 #include "stdafx.h"
-//#include "WorldGenerator.h"
-//#include "Universe.h"
-//#include "ParameterContainer.h"
-
 
 // This is an example of an exported variable
-WORLDGENERATOR_API int nWorldGenerator=0;
+//WORLDGENERATOR_API int nWorldGenerator=0;
 
 // This is an example of an exported function.
-WORLDGENERATOR_API int fnWorldGenerator(void)
+/*WORLDGENERATOR_API int fnWorldGenerator(void)
 {
 	return 42;
-}
+}*/
 
 WorldGenerator* WorldGenerator::instance_ = 0;
 
-// This is the constructor of a class that has been exported.
-// see WorldGenerator.h for the class definition
+/**
+  @fn     WorldGenerator :: WorldGenerator
+  @brief  default constructor
+**/
 WorldGenerator::WorldGenerator()
 {
   std::cout << "entered: WorldGenerator::WorldGenerator()" << std::endl;
@@ -28,7 +30,11 @@ WorldGenerator::WorldGenerator()
 	return;
 }
 
-
+/**
+@fn     WorldGenerator :: getInstance
+@brief  returns the singleton instance of WorldGenerator
+@return singleton instance of WorldGenerator
+**/
 WorldGenerator* WorldGenerator::getInstance() {
   std::cout << "entered: WorldGenerator::getInstace()" << std::endl;
   if(instance_ == NULL) {
@@ -37,7 +43,11 @@ WorldGenerator* WorldGenerator::getInstance() {
   return instance_;
 }
 
-
+/**
+@fn     WorldGenerator :: get_world_parameters
+@brief  getter for world_parameters_
+@return world_parameters
+**/
 ParameterContainer WorldGenerator::get_world_parameters() {
   std::cout << "entered: WorldGenerator::get_world_parameters()" << std::endl;
   if(world_parameters_ == NULL) {
@@ -46,7 +56,12 @@ ParameterContainer WorldGenerator::get_world_parameters() {
   return *world_parameters_;
 }
 
-
+/**
+@fn     WorldGenerator :: set_world_parameters
+@brief  setter for world_parameters_
+@param  world_parameters    contains the new world parameters
+@return 1 = OK; 0 = Error
+**/
 bool WorldGenerator::set_world_parameters(ParameterContainer world_parameters) {
   std::cout << "entered: WorldGenerator::set_world_parameters()" << std::endl;
   delete world_parameters_;
@@ -57,7 +72,11 @@ bool WorldGenerator::set_world_parameters(ParameterContainer world_parameters) {
   return 1;
 }
 
-
+/**
+@fn     WorldGenerator :: doTheGodJob
+@brief  starts the universe generation process
+@return 1 = OK; 0 = Error
+**/
 bool WorldGenerator::doTheGodJob() {
   std::cout << "entered: WorldGenerator::doTheGodJob()" << std::endl;
   get_world_parameters();

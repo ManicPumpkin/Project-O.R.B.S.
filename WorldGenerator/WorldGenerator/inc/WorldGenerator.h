@@ -1,3 +1,12 @@
+/**
+  @file   WolrdGenerator.h
+  @brief  contains the definition of the class WolrdGenerator as well as the 
+          preprocessor directives for exporting and importing classes and
+          functions
+  @author mwilhelm
+  @date   2013-11-27
+**/
+
 // The following ifdef block is the standard way of creating macros which make exporting 
 // from a DLL simpler. All files within this DLL are compiled with the WORLDGENERATOR_EXPORTS
 // symbol defined on the command line. This symbol should not be defined on any project
@@ -13,7 +22,12 @@
 class Universe;
 struct ParameterContainer;
 
-// This class is exported from the WorldGenerator.dll
+/**
+  @class WorldGenerator
+  @brief represents the entry point of the world generation process. contains
+         functions to exchange ParameterContainer with the calling application.
+         this class is exported from the WorldGenerator.dll
+**/
 class WORLDGENERATOR_API WorldGenerator {
   protected:
     WorldGenerator();
@@ -24,12 +38,10 @@ class WORLDGENERATOR_API WorldGenerator {
 	  bool set_world_parameters(ParameterContainer world_parameters);
 	  bool doTheGodJob();
 
-  //protected:
-
   private:
-	  static WorldGenerator *instance_;
-	  Universe *universe_;
-	  ParameterContainer *world_parameters_;
+	  static WorldGenerator *instance_; //!< holds the singleton instance
+    Universe *universe_; //!< stores the universe
+    ParameterContainer *world_parameters_; //!< parameter container to exchange parameters with the calling application
 };
 
 extern WORLDGENERATOR_API int nWorldGenerator;

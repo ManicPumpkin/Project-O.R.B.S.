@@ -1,7 +1,11 @@
-// stdafx.h : include file for standard system include files,
-// or project specific include files that are used frequently, but
-// are changed infrequently
-//
+/**
+  @file   stdafx.h
+  @brief  include file for standard system include files,
+          or project specific include files that are used frequently,
+          but are changed infrequently
+  @author mwilhelm
+  @date   2013-11-27
+**/
 
 #pragma once
 
