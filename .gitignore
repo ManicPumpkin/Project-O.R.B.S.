@@ -17,7 +17,8 @@
 *.pdb
 *.ipch
 *.vcxproj.user
-
+*Debug/
+*.opensdf
 
 # LaTex files
 *.aux
@@ -25,4 +26,4 @@
 *.aut
 *.gz
 *.out
-*doc\*.log
+*main_Ideen.log
