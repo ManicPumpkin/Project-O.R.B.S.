@@ -12,9 +12,18 @@
 *.la
 *.a
 
+# Unnecessary Visual Studio Files
+#*.suo
+*.pdb
+*.ipch
+*.vcxproj.user
+*Debug/
+*.opensdf
+
 # LaTex files
 *.aux
 *.toc
 *.aut
 *.gz
 *.out
+*main_Ideen.log
