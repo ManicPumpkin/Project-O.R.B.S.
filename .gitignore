@@ -12,9 +12,17 @@
 *.la
 *.a
 
+# Unnecessary Visual Studio Files
+#*.suo
+*.pdb
+*.ipch
+*.vcxproj.user
+
+
 # LaTex files
 *.aux
 *.toc
 *.aut
 *.gz
 *.out
+*doc\*.log
