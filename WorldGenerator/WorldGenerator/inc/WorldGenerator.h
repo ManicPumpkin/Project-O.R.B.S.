@@ -33,6 +33,7 @@ class WORLDGENERATOR_API WorldGenerator {
     WorldGenerator();
 
   public:
+    ~WorldGenerator();
     static /*WORLDGENERATOR_API*/ WorldGenerator* getInstance();
 	  ParameterContainer get_world_parameters();
 	  bool set_world_parameters(ParameterContainer world_parameters);

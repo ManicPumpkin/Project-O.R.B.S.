@@ -24,10 +24,27 @@ WorldGenerator* WorldGenerator::instance_ = 0;
 **/
 WorldGenerator::WorldGenerator()
 {
+#ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::WorldGenerator()" << std::endl;
+#endif
+
   universe_ = new Universe(this);
   world_parameters_ = NULL;
 	return;
+}
+
+/**
+  @fn     WorldGenerator :: ~WorldGenerator
+  @brief  destructor
+**/
+WorldGenerator::~WorldGenerator() {
+#ifdef DEBUG_MODE
+  std::cout << "entered: WorldGenerator::~WorldGenerator()" << std::endl;
+#endif
+
+  delete world_parameters_;
+  delete universe_;
+  //delete instance_;
 }
 
 /**
@@ -36,7 +53,10 @@ WorldGenerator::WorldGenerator()
 @return singleton instance of WorldGenerator
 **/
 WorldGenerator* WorldGenerator::getInstance() {
+#ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::getInstace()" << std::endl;
+#endif
+
   if(instance_ == NULL) {
     instance_ = new WorldGenerator();
   }
@@ -49,7 +69,10 @@ WorldGenerator* WorldGenerator::getInstance() {
 @return world_parameters
 **/
 ParameterContainer WorldGenerator::get_world_parameters() {
+#ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::get_world_parameters()" << std::endl;
+#endif
+
   if(world_parameters_ == NULL) {
     world_parameters_ = new ParameterContainer();
   }
@@ -63,7 +86,10 @@ ParameterContainer WorldGenerator::get_world_parameters() {
 @return 1 = OK; 0 = Error
 **/
 bool WorldGenerator::set_world_parameters(ParameterContainer world_parameters) {
+#ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::set_world_parameters()" << std::endl;
+#endif
+
   delete world_parameters_;
   world_parameters_ = new ParameterContainer(world_parameters);
   if(world_parameters_->universe_size_ != world_parameters.universe_size_) {
@@ -78,7 +104,10 @@ bool WorldGenerator::set_world_parameters(ParameterContainer world_parameters) {
 @return 1 = OK; 0 = Error
 **/
 bool WorldGenerator::doTheGodJob() {
+#ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::doTheGodJob()" << std::endl;
+#endif
+
   get_world_parameters();
   bool result = universe_->generateWorld();
   if(result) {

@@ -17,7 +17,7 @@
 
 
 
-// TODO: reference additional headers your program requires here
+// reference additional headers your program requires here
 #include <iostream>
 
 #include "WorldGenerator.h"
@@ -25,3 +25,6 @@
 #include "ParameterContainer.h"
 #include "Orb.h"
 #include "Globals.h"
+
+// TODO comment for release
+#define DEBUG_MODE

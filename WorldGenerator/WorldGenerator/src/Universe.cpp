@@ -6,6 +6,9 @@
 **/
 
 #include "stdafx.h"
+//#include <ctime>
+#include <random>
+//#include <iterator>
 
 using namespace GlobalEnums;
 using namespace std;
@@ -15,6 +18,9 @@ using namespace std;
   @brief  default constructor
 **/
 /*Universe::Universe() {
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::Universe()" << std::endl;
+#endif
 }*/
 
 /**
@@ -23,7 +29,9 @@ using namespace std;
   @param  *parent    pointer to parent
 **/
 /*inline*/ Universe::Universe(WorldGenerator *parent) {
+#ifdef DEBUG_MODE
   std::cout << "entered: Universe::Universe(WorldGenerator *parent)" << std::endl;
+#endif
   parent_ = parent;
   init();
 }
@@ -33,9 +41,14 @@ using namespace std;
   @brief  destructor
 **/
 Universe::~Universe() {
-  std::cout << "entered: Universe::~Universe()" << std::endl;
-  delete this->start_orb_;
-  delete parent_;
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::~Universe()" << std::endl;
+#endif
+
+  //delete start_orb_;
+  orbs_.clear();
+  //delete parent_;
+  parent_ = NULL;
 }
 
 /**
@@ -44,7 +57,9 @@ Universe::~Universe() {
   @return 1 = OK; 0 = Error
 **/
 bool Universe::generateWorld() {
-  std::cout << "entered: Universe::generateWorld()" << std::endl;
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::generateWorld()" << std::endl;
+#endif
 
   size_ = parent_->get_world_parameters().universe_size_;
 
@@ -71,8 +86,11 @@ bool Universe::generateWorld() {
   }
 
   for(uint32_t i = 0; i < orb_count_; i++) {
+#ifdef DEBUG_MODE
     std::cout << i << " ";
-    orbs_.insert(pair<uint32_t, Orb>(i, generateOrb()));
+#endif
+
+    orbs_.insert(pair<uint32_t, Orb*>(i, generateOrb()));
   }
 
   return 0; // TODO correct it
@@ -84,7 +102,9 @@ bool Universe::generateWorld() {
 @return 1 = OK; 0 = Error
 **/
 bool Universe::init() {
-  std::cout << "entered: Universe::init()" << std::endl;
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::init()" << std::endl;
+#endif
   bool result = 1;
   
   size_ = UniverseSize::kMedium;
@@ -93,7 +113,9 @@ bool Universe::init() {
 
   //orbs_;
 
-  start_orb_ = new std::pair<uint32_t, Orb>();
+  //start_orb_ = new std::pair<uint32_t, Orb>();
+
+  start_orb_ = 0;
 
   return result;
 }
@@ -103,9 +125,18 @@ bool Universe::init() {
 @brief  generate a instance of class Orb
 @return the new instance of class Orb
 **/
-Orb& Universe::generateOrb() {
-  std::cout << "entered: Universe::generateOrb()" << std::endl;
-  return *new Orb();
+Orb* Universe::generateOrb() {
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::generateOrb()" << std::endl;
+#endif
+  
+  std::random_device generator;
+  std::uniform_int_distribution<int> distribution(0, sizeof(Biomes)-1);
+  
+
+  Biomes random_biome = static_cast<Biomes>(distribution(generator));
+
+  return new Orb(random_biome);
 }
 
 /**
@@ -114,8 +145,11 @@ Orb& Universe::generateOrb() {
 @return 1 = OK; 0 = Error
 **/
 bool Universe::generateOrbConnection() {
-  std::cout << "entered: Universe::generatteOrbConnection()" << std::endl;
-  return 0;
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::generateOrbConnection()" << std::endl;
+#endif
+
+  return 0; //TODO  implement
 }
 
 /**
@@ -124,8 +158,11 @@ bool Universe::generateOrbConnection() {
 @return 1 = OK; 0 = Error
 **/
 bool Universe::setStartOrb() {
-  std::cout << "entered: Universe::setStartOrb()" << std::endl;
-  return 0;
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::setStartOrb()" << std::endl;
+#endif
+
+  return 0;  //TODO  implement
 }
 
 /**
@@ -134,8 +171,11 @@ bool Universe::setStartOrb() {
 @return 1 = OK; 0 = Error
 **/
 bool Universe::insertBosses() {
-  std::cout << "entered: Universe::insertBosses()" << std::endl;
-  return 0;
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::insertBosses()" << std::endl;
+#endif
+
+  return 0; //TODO  implement
 }
 
 /**
@@ -144,7 +184,10 @@ bool Universe::insertBosses() {
 @return 1 = OK; 0 = Error
 **/
 bool Universe::insertEvents() {
-  std::cout << "entered: Universe::insertEvents()" << std::endl;
-  return 0;
+#ifdef DEBUG_MODE
+  std::cout << "entered Universe::insertEvents()" << std::endl;
+#endif
+
+  return 0; //TODO  implement
 }
 

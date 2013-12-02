@@ -1,0 +1,105 @@
+\hypertarget{class_world_generator}{\section{World\-Generator Class Reference}
+\label{class_world_generator}\index{World\-Generator@{World\-Generator}}
+}
+
+
+represents the entry point of the world generation process. contains functions to exchange \hyperlink{struct_parameter_container}{Parameter\-Container} with the calling application. this class is exported from the World\-Generator.\-dll  
+
+
+
+
+{\ttfamily \#include $<$World\-Generator.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_parameter_container}{Parameter\-Container} \hyperlink{class_world_generator_ae6f6491b8dae06d237f23616479c755f}{get\-\_\-world\-\_\-parameters} ()
+\begin{DoxyCompactList}\small\item\em getter for world\-\_\-parameters\-\_\- \end{DoxyCompactList}\item 
+bool \hyperlink{class_world_generator_a5cd2d418569bf601b2d39fbb71c9f6eb}{set\-\_\-world\-\_\-parameters} (\hyperlink{struct_parameter_container}{Parameter\-Container} world\-\_\-parameters)
+\begin{DoxyCompactList}\small\item\em setter for world\-\_\-parameters\-\_\- \end{DoxyCompactList}\item 
+bool \hyperlink{class_world_generator_a6b5a256fd22a762b7e96b2d5e2b42be3}{do\-The\-God\-Job} ()
+\begin{DoxyCompactList}\small\item\em starts the universe generation process \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_world_generator}{World\-Generator} $\ast$ \hyperlink{class_world_generator_acd3544dd46ffa3d321e7b7677f7196b1}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em returns the singleton instance of \hyperlink{class_world_generator}{World\-Generator} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_world_generator_ac4f4abec2013abad54ec417e3b2b6d70}{\hyperlink{class_world_generator_ac4f4abec2013abad54ec417e3b2b6d70}{World\-Generator} ()}\label{class_world_generator_ac4f4abec2013abad54ec417e3b2b6d70}
+
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represents the entry point of the world generation process. contains functions to exchange \hyperlink{struct_parameter_container}{Parameter\-Container} with the calling application. this class is exported from the World\-Generator.\-dll 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_world_generator_a6b5a256fd22a762b7e96b2d5e2b42be3}{\index{World\-Generator@{World\-Generator}!do\-The\-God\-Job@{do\-The\-God\-Job}}
+\index{do\-The\-God\-Job@{do\-The\-God\-Job}!WorldGenerator@{World\-Generator}}
+\subsubsection[{do\-The\-God\-Job}]{\setlength{\rightskip}{0pt plus 5cm}bool World\-Generator\-::do\-The\-God\-Job (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_world_generator_a6b5a256fd22a762b7e96b2d5e2b42be3}
+
+
+starts the universe generation process 
+
+\begin{DoxyReturn}{Returns}
+1 = O\-K; 0 = Error 
+\end{DoxyReturn}
+\hypertarget{class_world_generator_ae6f6491b8dae06d237f23616479c755f}{\index{World\-Generator@{World\-Generator}!get\-\_\-world\-\_\-parameters@{get\-\_\-world\-\_\-parameters}}
+\index{get\-\_\-world\-\_\-parameters@{get\-\_\-world\-\_\-parameters}!WorldGenerator@{World\-Generator}}
+\subsubsection[{get\-\_\-world\-\_\-parameters}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parameter\-Container} World\-Generator\-::get\-\_\-world\-\_\-parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_world_generator_ae6f6491b8dae06d237f23616479c755f}
+
+
+getter for world\-\_\-parameters\-\_\- 
+
+\begin{DoxyReturn}{Returns}
+world\-\_\-parameters 
+\end{DoxyReturn}
+\hypertarget{class_world_generator_acd3544dd46ffa3d321e7b7677f7196b1}{\index{World\-Generator@{World\-Generator}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!WorldGenerator@{World\-Generator}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf World\-Generator} $\ast$ World\-Generator\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_world_generator_acd3544dd46ffa3d321e7b7677f7196b1}
+
+
+returns the singleton instance of \hyperlink{class_world_generator}{World\-Generator} 
+
+\begin{DoxyReturn}{Returns}
+singleton instance of \hyperlink{class_world_generator}{World\-Generator} 
+\end{DoxyReturn}
+\hypertarget{class_world_generator_a5cd2d418569bf601b2d39fbb71c9f6eb}{\index{World\-Generator@{World\-Generator}!set\-\_\-world\-\_\-parameters@{set\-\_\-world\-\_\-parameters}}
+\index{set\-\_\-world\-\_\-parameters@{set\-\_\-world\-\_\-parameters}!WorldGenerator@{World\-Generator}}
+\subsubsection[{set\-\_\-world\-\_\-parameters}]{\setlength{\rightskip}{0pt plus 5cm}bool World\-Generator\-::set\-\_\-world\-\_\-parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf Parameter\-Container}}]{world\-\_\-parameters}
+\end{DoxyParamCaption}
+)}}\label{class_world_generator_a5cd2d418569bf601b2d39fbb71c9f6eb}
+
+
+setter for world\-\_\-parameters\-\_\- 
+
+
+\begin{DoxyParams}{Parameters}
+{\em world\-\_\-parameters} & contains the new world parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 = O\-K; 0 = Error 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Marco/\-Workspace/\-Git\-Hub/\-O\-R\-B\-S/\-Project-\/\-O.\-R.\-B.\-S/\-World\-Generator/\-World\-Generator/inc/World\-Generator.\-h\item 
+C\-:/\-Users/\-Marco/\-Workspace/\-Git\-Hub/\-O\-R\-B\-S/\-Project-\/\-O.\-R.\-B.\-S/\-World\-Generator/\-World\-Generator/src/World\-Generator.\-cpp\end{DoxyCompactItemize}

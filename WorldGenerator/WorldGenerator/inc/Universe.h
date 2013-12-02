@@ -28,7 +28,7 @@ class Universe {
 
   private:
     bool init();
-    Orb& generateOrb();
+    Orb* generateOrb();
     bool generateOrbConnection();
     bool setStartOrb();
     bool insertBosses();
@@ -37,7 +37,8 @@ class Universe {
     WorldGenerator *parent_;  //!< points to the parent instance
     GlobalEnums::UniverseSize size_;  //!< specifies the size of the universe
     uint32_t orb_count_;  //!< holds the amount of orbs for the universe
-    std::unordered_map<uint32_t, Orb> orbs_;  //!< holds all orbs and their IDs
-    std::pair<uint32_t, Orb> *start_orb_;  //!< specifies which orb is the start orb
+    std::unordered_map<uint32_t, Orb*> orbs_;  //!< holds all orbs and their IDs
+    //std::pair<uint32_t, Orb*> *start_orb_;  //!< specifies which orb is the start orb
+    uint32_t start_orb_; //!< holds the start orb's ID
 };
 
