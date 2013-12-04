@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "Globals.h"
+#include "GlobalEnums.h"
 
 /**
   @class Orb

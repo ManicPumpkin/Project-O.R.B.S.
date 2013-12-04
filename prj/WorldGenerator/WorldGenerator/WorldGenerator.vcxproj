@@ -80,13 +80,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inc\Biomes.h" />
-    <ClInclude Include="inc\Globals.h" />
-    <ClInclude Include="inc\OrbSize.h" />
+    <ClInclude Include="inc\GlobalEnums.h" />
     <ClInclude Include="inc\ParameterContainer.h" />
     <ClInclude Include="inc\stdafx.h" />
     <ClInclude Include="inc\targetver.h" />
-    <ClInclude Include="inc\UniverseSize.h" />
     <ClInclude Include="inc\WorldGenerator.h" />
     <ClInclude Include="inc\Universe.h" />
     <ClInclude Include="inc\Orb.h" />

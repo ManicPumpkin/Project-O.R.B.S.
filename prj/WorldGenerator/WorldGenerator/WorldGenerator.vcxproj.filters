@@ -33,19 +33,10 @@
     <ClInclude Include="inc\Orb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\Globals.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="inc\ParameterContainer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inc\OrbSize.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="inc\Biomes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="inc\UniverseSize.h">
+    <ClInclude Include="inc\GlobalEnums.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

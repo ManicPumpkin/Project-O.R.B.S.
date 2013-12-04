@@ -24,7 +24,8 @@
 #include "Universe.h"
 #include "ParameterContainer.h"
 #include "Orb.h"
-#include "Globals.h"
+//#include "Globals.h"
+#include "GlobalEnums.h"
 
 // TODO comment for release
 #define DEBUG_MODE

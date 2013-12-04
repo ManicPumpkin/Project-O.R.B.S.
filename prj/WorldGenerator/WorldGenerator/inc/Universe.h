@@ -10,7 +10,7 @@
 #include <unordered_map>
 #include <cstdint>
 
-#include "Globals.h"
+#include "GlobalEnums.h"
 
 class WorldGenerator;
 class Orb;
