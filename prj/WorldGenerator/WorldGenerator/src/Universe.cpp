@@ -6,9 +6,7 @@
 **/
 
 #include "stdafx.h"
-//#include <ctime>
 #include <random>
-//#include <iterator>
 
 using namespace GlobalEnums;
 using namespace std;

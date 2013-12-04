@@ -3,12 +3,24 @@
 
 #include "..\inc\stdafx.h"
 
-#include "..\..\WorldGenerator\inc\stdafx.h"
+#include <iostream>
+
+#include "..\..\WorldGenerator\inc\WorldGenerator.h"
+
+
+// TODO comment for release
+#define DEBUG_MODE true
+
+// needs to be included after the defines
+#include "..\..\..\Log\inc\Log.h"
+
 
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+  InitializeLog();
+
   cout << "whooot whooot\t Testing application started";
 
   getchar();
@@ -27,8 +39,10 @@ int _tmain(int argc, _TCHAR* argv[])
 
   delete wg;
 
-  flushall;
+  //flushall();
   getchar();
+
+  StopLog();
 
 	return 0;
 }

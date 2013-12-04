@@ -96,6 +96,9 @@
       <Project>{4be86f81-c74f-40f0-a426-832ed9892cfa}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\Log.lib" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

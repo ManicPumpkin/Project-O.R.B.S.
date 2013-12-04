@@ -1,42 +1,49 @@
+//=============================================================================
 /**
   @file   Unvierse.cpp
   @brief  contains the function definitions of the class WorldGenerator
   @author mwilhelm
   @date   2013-11-27
 **/
-
+//=============================================================================
+// INCLUDES
+//=============================================================================
 #include "stdafx.h"
 
-// This is an example of an exported variable
-//WORLDGENERATOR_API int nWorldGenerator=0;
-
-// This is an example of an exported function.
-/*WORLDGENERATOR_API int fnWorldGenerator(void)
-{
-	return 42;
-}*/
-
+//=============================================================================
+// STATIC MEMBER DEFINITIONS
+//=============================================================================
 WorldGenerator* WorldGenerator::instance_ = 0;
 
+//=============================================================================
+// FUNCTIONS
+//=============================================================================
 /**
   @fn     WorldGenerator :: WorldGenerator
   @brief  default constructor
 **/
+//=============================================================================
 WorldGenerator::WorldGenerator()
 {
 #ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::WorldGenerator()" << std::endl;
 #endif
 
+  
+
+  
+
   universe_ = new Universe(this);
   world_parameters_ = NULL;
 	return;
 }
 
+//=============================================================================
 /**
   @fn     WorldGenerator :: ~WorldGenerator
   @brief  destructor
 **/
+//=============================================================================
 WorldGenerator::~WorldGenerator() {
 #ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::~WorldGenerator()" << std::endl;
@@ -47,11 +54,13 @@ WorldGenerator::~WorldGenerator() {
   //delete instance_;
 }
 
+//=============================================================================
 /**
 @fn     WorldGenerator :: getInstance
 @brief  returns the singleton instance of WorldGenerator
 @return singleton instance of WorldGenerator
 **/
+//=============================================================================
 WorldGenerator* WorldGenerator::getInstance() {
 #ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::getInstace()" << std::endl;
@@ -63,11 +72,13 @@ WorldGenerator* WorldGenerator::getInstance() {
   return instance_;
 }
 
+//=============================================================================
 /**
 @fn     WorldGenerator :: get_world_parameters
 @brief  getter for world_parameters_
 @return world_parameters
 **/
+//=============================================================================
 ParameterContainer WorldGenerator::get_world_parameters() {
 #ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::get_world_parameters()" << std::endl;
@@ -79,12 +90,14 @@ ParameterContainer WorldGenerator::get_world_parameters() {
   return *world_parameters_;
 }
 
+//=============================================================================
 /**
 @fn     WorldGenerator :: set_world_parameters
 @brief  setter for world_parameters_
 @param  world_parameters    contains the new world parameters
 @return 1 = OK; 0 = Error
 **/
+//=============================================================================
 bool WorldGenerator::set_world_parameters(ParameterContainer world_parameters) {
 #ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::set_world_parameters()" << std::endl;
@@ -98,11 +111,13 @@ bool WorldGenerator::set_world_parameters(ParameterContainer world_parameters) {
   return 1;
 }
 
+//=============================================================================
 /**
 @fn     WorldGenerator :: doTheGodJob
 @brief  starts the universe generation process
 @return 1 = OK; 0 = Error
 **/
+//=============================================================================
 bool WorldGenerator::doTheGodJob() {
 #ifdef DEBUG_MODE
   std::cout << "entered: WorldGenerator::doTheGodJob()" << std::endl;

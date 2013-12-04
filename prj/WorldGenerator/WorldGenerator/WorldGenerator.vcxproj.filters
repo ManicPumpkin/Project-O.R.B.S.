@@ -58,6 +58,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <Library Include="lib\Log.lib" />
   </ItemGroup>
 </Project>
