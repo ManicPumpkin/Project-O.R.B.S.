@@ -3,21 +3,32 @@
 }
 
 
-This file includes all functions of \hyperlink{class_log}{Log} class.  
+This file contains the function defenitions of class \hyperlink{class_log}{Log}.  
 
 
 {\ttfamily \#include \char`\"{}stdafx.\-h\char`\"{}}\\*
 {\ttfamily \#include $<$fstream$>$}\\*
 {\ttfamily \#include $<$sstream$>$}\\*
 {\ttfamily \#include $<$time.\-h$>$}\\*
-{\ttfamily \#include $<$iostream$>$}\\*
 {\ttfamily \#include \char`\"{}Log.\-h\char`\"{}}\\*
 
 
 \subsection{Detailed Description}
-This file includes all functions of \hyperlink{class_log}{Log} class. \begin{DoxyAuthor}{Author}
+This file contains the function defenitions of class \hyperlink{class_log}{Log}. \begin{DoxyVerb}    The log system writes errors, warnings, infos and debug messages into
+    a HTML file. For the log system to write debug messages there must be
+    set the varbiable Log::debug_mode_ to true. Otherwise the log system
+    will ignore all messages sent by Log::LOG_DEBUG().
+    To get a proper HTML file, one has to be sure to call the 
+    deconstructor of this class. To write messages use following 
+    functions:
+    LOG_DEBUG(std::string msg), 
+    LOG_INFO(std::string msg), 
+    LOG_WARNING(std::string msg), 
+    LOG_ERROR(std::string msg, string id).
+\end{DoxyVerb}
+ \begin{DoxyAuthor}{Author}
 drubner, mwilhelm 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Date}
-Created 2012-\/08-\/14 
+2012-\/08-\/14 
 \end{DoxyDate}

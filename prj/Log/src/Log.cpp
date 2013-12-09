@@ -1,9 +1,21 @@
 //=============================================================================
 /**
-  @file	Log.cpp
-  @brief	This file includes all functions of Log class.
+  @file   Log.cpp
+  @brief  This file contains the function defenitions of class Log.
+
+          The log system writes errors, warnings, infos and debug messages into
+          a HTML file. For the log system to write debug messages there must be
+          set the varbiable Log::debug_mode_ to true. Otherwise the log system
+          will ignore all messages sent by Log::LOG_DEBUG().
+          To get a proper HTML file, one has to be sure to call the 
+          deconstructor of this class. To write messages use following 
+          functions:
+          LOG_DEBUG(std::string msg), 
+          LOG_INFO(std::string msg), 
+          LOG_WARNING(std::string msg), 
+          LOG_ERROR(std::string msg, string id).
   @author	drubner, mwilhelm
-  @date	Created 2012-08-14
+  @date	  2012-08-14
 **/
 //=============================================================================
 //	Include
@@ -14,11 +26,6 @@
 #include <fstream>
 #include <sstream>
 #include <time.h>
-
-
-
-//TODO del include
-#include <iostream>
 
 #include "Log.h"
 

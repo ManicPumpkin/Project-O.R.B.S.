@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -62,7 +61,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -70,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -87,14 +85,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">Log.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This file contains function declarations and definitions for the logging system.  
+<p>This file contains a class for an abstract log system.  
 <a href="#details">More...</a></p>
 
 <p><a href="_log_8h_source.html">Go to the source code of this file.</a></p>
@@ -102,6 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html">Log</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains all functions for the log system.  <a href="class_log.html#details">More...</a><br/></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -109,74 +107,26 @@ Macros</h2></td></tr>
 <tr class="memitem:a6ee7e460d573576a667f45982e985163"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ee7e460d573576a667f45982e985163"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_API</b>&#160;&#160;&#160;__declspec(dllimport)</td></tr>
 <tr class="separator:a6ee7e460d573576a667f45982e985163"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:aed80102bd07672dfa4bfd546daa155bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed80102bd07672dfa4bfd546daa155bd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Log</b> (std::string msg)</td></tr>
-<tr class="separator:aed80102bd07672dfa4bfd546daa155bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae05c1f099f8f9dec390426ca88fb0f92"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae05c1f099f8f9dec390426ca88fb0f92"></a>
-**LOG_API *bool&#160;</td><td class="memItemRight" valign="bottom"><b>Log</b> (std::string msg, std::string space)</td></tr>
-<tr class="separator:ae05c1f099f8f9dec390426ca88fb0f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2641b353b2583cdcdd34657b366214cc"><td class="memItemLeft" align="right" valign="top">**LOG_API *std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_log_8h.html#a2641b353b2583cdcdd34657b366214cc">CurrentTime</a> ()</td></tr>
-<tr class="memdesc:a2641b353b2583cdcdd34657b366214cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a timestamp of time in std::string format.  <a href="#a2641b353b2583cdcdd34657b366214cc">More...</a><br/></td></tr>
-<tr class="separator:a2641b353b2583cdcdd34657b366214cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b6538aa199cec9012ba0f6c07063a04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b6538aa199cec9012ba0f6c07063a04"></a>
-**LOG_API *std::string&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentDate</b> ()</td></tr>
-<tr class="separator:a1b6538aa199cec9012ba0f6c07063a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5ebfb957f8fc8d257f48e467a77199a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5ebfb957f8fc8d257f48e467a77199a"></a>
-*LOG_API void&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_DEBUG</b> (std::string msg)</td></tr>
-<tr class="separator:aa5ebfb957f8fc8d257f48e467a77199a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf15f825792b7e0eba5e202319c00413"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf15f825792b7e0eba5e202319c00413"></a>
-**inline *LOG_API void&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_INFO</b> (std::string msg)</td></tr>
-<tr class="separator:abf15f825792b7e0eba5e202319c00413"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08424c80becb2067ac676ef2e3e18794"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08424c80becb2067ac676ef2e3e18794"></a>
-**inline *LOG_API void&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_WARNING</b> (std::string msg)</td></tr>
-<tr class="separator:a08424c80becb2067ac676ef2e3e18794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12f5df625b61200de9820700f5142e62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12f5df625b61200de9820700f5142e62"></a>
-**inline *LOG_API void&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_ERROR</b> (std::string msg, std::string id)</td></tr>
-<tr class="separator:a12f5df625b61200de9820700f5142e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file contains function declarations and definitions for the logging system. </p>
-<pre class="fragment">    The log system writes errors, warnings and other messages into 
-    a HTML file. For the log system to work properly there must be made 
-    some defines in the first place. These defines are:
-    DEBUG_MODE TRUE|FALSE
-    LOG_FILE file_name
-    LOG_PATH relative_or_absolute_path
-    To get a proper HTML file, one has to call InitializeLog() before
-    writing messages and StopLog() after the last message. To write
-    messages use following functions:
-    LOG_DEBUG(string msg)
-    LOG_INFO(string msg)
-    LOG_WARNING(string msg
-    LOG_ERROR(string msg, string id)
-</pre><dl class="section author"><dt>Author</dt><dd>drubner, mwilhelm </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>Created at 2012-08-15 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a2641b353b2583cdcdd34657b366214cc"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CurrentTime </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns a timestamp of time in std::string format. </p>
-<dl class="section return"><dt>Returns</dt><dd>std::string </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p>This file contains a class for an abstract log system. </p>
+<pre class="fragment">    The log system writes errors, warnings, infos and debug messages into
+    a HTML file. For the log system to write debug messages there must be
+    set the varbiable Log::debug_mode_ to true. Otherwise the log system
+    will ignore all messages sent by Log::LOG_DEBUG().
+    To get a proper HTML file, one has to be sure to call the 
+    deconstructor of this class. To write messages use following 
+    functions:
+    LOG_DEBUG(std::string msg), 
+    LOG_INFO(std::string msg), 
+    LOG_WARNING(std::string msg), 
+    LOG_ERROR(std::string msg, string id).
+</pre> <dl class="section author"><dt>Author</dt><dd>drubner, mwilhelm </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2012-08-15 </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 9 2013 15:26:40 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 9 2013 16:00:52 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

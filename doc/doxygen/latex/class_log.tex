@@ -1,6 +1,15 @@
 \hypertarget{class_log}{\section{Log Class Reference}
 \label{class_log}\index{Log@{Log}}
 }
+
+
+This class contains all functions for the log system.  
+
+
+
+
+{\ttfamily \#include $<$Log.\-h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,10 +31,15 @@
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_log_a12ba1925c1d6b0d363cafbca538da3e6}{bool {\bfseries debug\-\_\-mode\-\_\-}}\label{class_log_a12ba1925c1d6b0d363cafbca538da3e6}
+\hypertarget{class_log_a12ba1925c1d6b0d363cafbca538da3e6}{bool {\bfseries debug\-\_\-mode\-\_\-} = false}\label{class_log_a12ba1925c1d6b0d363cafbca538da3e6}
 
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+This class contains all functions for the log system. 
+
+The log system writes errors, warnings, infos and debug messages into a H\-T\-M\-L file. For the log system to write debug messages there must be set the varbiable Log\-::debug\-\_\-mode\-\_\- to true. Otherwise the log system will ignore all messages sent by Log\-::\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G(). To get a proper H\-T\-M\-L file, one has to be sure to call the deconstructor of this class. To write messages use following functions\-: L\-O\-G\-\_\-\-D\-E\-B\-U\-G(std\-::string msg), L\-O\-G\-\_\-\-I\-N\-F\-O(std\-::string msg), L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G(std\-::string msg), L\-O\-G\-\_\-\-E\-R\-R\-O\-R(std\-::string msg, string id). 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
