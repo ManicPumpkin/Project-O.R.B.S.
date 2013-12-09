@@ -1,0 +1,87 @@
+\hypertarget{_log_8h}{\section{C\-:/\-Users/\-Marco/\-Workspace/\-Git\-Hub/\-O\-R\-B\-S/\-Project-\/\-O.R.\-B.\-S/prj/\-Log/inc/\-Log.h File Reference}
+\label{_log_8h}\index{C\-:/\-Users/\-Marco/\-Workspace/\-Git\-Hub/\-O\-R\-B\-S/\-Project-\/\-O.\-R.\-B.\-S/prj/\-Log/inc/\-Log.\-h@{C\-:/\-Users/\-Marco/\-Workspace/\-Git\-Hub/\-O\-R\-B\-S/\-Project-\/\-O.\-R.\-B.\-S/prj/\-Log/inc/\-Log.\-h}}
+}
+
+
+This file contains function declarations and definitions for the logging system.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_log}{Log}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_log_8h_a6ee7e460d573576a667f45982e985163}{\#define {\bfseries L\-O\-G\-\_\-\-A\-P\-I}~\-\_\-\-\_\-declspec(dllimport)}\label{_log_8h_a6ee7e460d573576a667f45982e985163}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{_log_8h_aed80102bd07672dfa4bfd546daa155bd}{bool {\bfseries Log} (std\-::string msg)}\label{_log_8h_aed80102bd07672dfa4bfd546daa155bd}
+
+\item 
+\hypertarget{_log_8h_ae05c1f099f8f9dec390426ca88fb0f92}{$\ast$$\ast$L\-O\-G\-\_\-\-A\-P\-I $\ast$bool {\bfseries Log} (std\-::string msg, std\-::string space)}\label{_log_8h_ae05c1f099f8f9dec390426ca88fb0f92}
+
+\item 
+$\ast$$\ast$L\-O\-G\-\_\-\-A\-P\-I $\ast$std\-::string \hyperlink{_log_8h_a2641b353b2583cdcdd34657b366214cc}{Current\-Time} ()
+\begin{DoxyCompactList}\small\item\em Returns a timestamp of time in std\-::string format. \end{DoxyCompactList}\item 
+\hypertarget{_log_8h_a1b6538aa199cec9012ba0f6c07063a04}{$\ast$$\ast$L\-O\-G\-\_\-\-A\-P\-I $\ast$std\-::string {\bfseries Current\-Date} ()}\label{_log_8h_a1b6538aa199cec9012ba0f6c07063a04}
+
+\item 
+\hypertarget{_log_8h_aa5ebfb957f8fc8d257f48e467a77199a}{$\ast$L\-O\-G\-\_\-\-A\-P\-I void {\bfseries L\-O\-G\-\_\-\-D\-E\-B\-U\-G} (std\-::string msg)}\label{_log_8h_aa5ebfb957f8fc8d257f48e467a77199a}
+
+\item 
+\hypertarget{_log_8h_abf15f825792b7e0eba5e202319c00413}{$\ast$$\ast$inline $\ast$L\-O\-G\-\_\-\-A\-P\-I void {\bfseries L\-O\-G\-\_\-\-I\-N\-F\-O} (std\-::string msg)}\label{_log_8h_abf15f825792b7e0eba5e202319c00413}
+
+\item 
+\hypertarget{_log_8h_a08424c80becb2067ac676ef2e3e18794}{$\ast$$\ast$inline $\ast$L\-O\-G\-\_\-\-A\-P\-I void {\bfseries L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G} (std\-::string msg)}\label{_log_8h_a08424c80becb2067ac676ef2e3e18794}
+
+\item 
+\hypertarget{_log_8h_a12f5df625b61200de9820700f5142e62}{$\ast$$\ast$inline $\ast$L\-O\-G\-\_\-\-A\-P\-I void {\bfseries L\-O\-G\-\_\-\-E\-R\-R\-O\-R} (std\-::string msg, std\-::string id)}\label{_log_8h_a12f5df625b61200de9820700f5142e62}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains function declarations and definitions for the logging system. \begin{DoxyVerb}    The log system writes errors, warnings and other messages into 
+    a HTML file. For the log system to work properly there must be made 
+    some defines in the first place. These defines are:
+    DEBUG_MODE TRUE|FALSE
+    LOG_FILE file_name
+    LOG_PATH relative_or_absolute_path
+    To get a proper HTML file, one has to call InitializeLog() before
+    writing messages and StopLog() after the last message. To write
+    messages use following functions:
+    LOG_DEBUG(string msg)
+    LOG_INFO(string msg)
+    LOG_WARNING(string msg
+    LOG_ERROR(string msg, string id)
+\end{DoxyVerb}
+
+
+\begin{DoxyAuthor}{Author}
+drubner, mwilhelm 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created at 2012-\/08-\/15 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{_log_8h_a2641b353b2583cdcdd34657b366214cc}{\index{Log.\-h@{Log.\-h}!Current\-Time@{Current\-Time}}
+\index{Current\-Time@{Current\-Time}!Log.h@{Log.\-h}}
+\subsubsection[{Current\-Time}]{\setlength{\rightskip}{0pt plus 5cm}Current\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{_log_8h_a2641b353b2583cdcdd34657b366214cc}
+
+
+Returns a timestamp of time in std\-::string format. 
+
+\begin{DoxyReturn}{Returns}
+std\-::string 
+\end{DoxyReturn}

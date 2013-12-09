@@ -35,29 +35,57 @@
 //=============================================================================
 //#include <string.h>
 
+
 //=============================================================================
 //	DEFINES
 //=============================================================================
-#define LOG_FILE "logfile.html"
+/*#define LOG_FILE "logfile.html"
 #define LOG_PATH ".\\log\\"
 #define LOG_FILEPATH			LOG_PATH LOG_FILE
-#define DEBUG_MODE true
+#define DEBUG_MODE true*/
 
 //=============================================================================
 //	FUNCTIONS
 //=============================================================================
-LOG_API bool	InitializeLog();
-LOG_API bool	StopLog();
-/*LOG_API*/ bool	Log(std::string msg);
+//LOG_API bool	InitializeLog();
+//LOG_API bool	StopLog();*/
+///*LOG_API*/ bool	Log(std::string msg);
 ///*LOG_API*/ bool	Log(std::string msg, std::string space);
-/*LOG_API*/ std::string			CurrentTime();
-/*LOG_API*/ std::string			CurrentDate();
+///*LOG_API*/ std::string			CurrentTime();
+///*LOG_API*/ std::string			CurrentDate();
 
 //=============================================================================
 //	INLINE
 //=============================================================================
-/*inline*/ LOG_API void LOG_DEBUG(std::string msg);
-/*inline*/ LOG_API void LOG_INFO(std::string msg);
-/*inline*/ LOG_API void LOG_WARNING(std::string msg);
-/*inline*/ LOG_API void LOG_ERROR(std::string msg, std::string id);
+///*inline*/ LOG_API void LOG_DEBUG(std::string msg);
+///*inline*/ LOG_API void LOG_INFO(std::string msg);
+///*inline*/ LOG_API void LOG_WARNING(std::string msg);
+///*inline*/ LOG_API void LOG_ERROR(std::string msg, std::string id);
 //inline LOG_API void LOG_MSGBOXERR(LPCSTR msg, LPCSTR id);
+
+
+LOG_API class Log {
+public:
+  bool debug_mode_;
+
+  LOG_API Log(std::string &path, std::string &file_name);
+  LOG_API ~Log();
+  LOG_API inline void LOG_DEBUG(std::string msg);
+  LOG_API inline void LOG_INFO(std::string msg);
+  LOG_API inline void LOG_WARNING(std::string msg);
+  LOG_API inline void LOG_ERROR(std::string msg, std::string id);
+  //inline LOG_API void LOG_MSGBOXERR(LPCSTR msg, LPCSTR id);
+
+protected:
+
+private:
+  std::string file_name_;
+  std::string path_;
+  std::string full_path_;
+
+  bool startLog();
+  bool stopLog();
+  bool logIt(std::string msg);
+  std::string currentTime();
+  std::string currentDate();
+};

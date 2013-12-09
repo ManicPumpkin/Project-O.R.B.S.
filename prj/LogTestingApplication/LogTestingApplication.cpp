@@ -13,13 +13,17 @@ int _tmain(int argc, _TCHAR* argv[])
 {
   cout << "Log Testing Application started" << endl;
 
-  InitializeLog();
+  Log *log = new Log(string("log\\\\\\\\"), string("test.log"));
 
-  LOG_DEBUG("test");
+  log->LOG_DEBUG("debug message");
+  log->LOG_INFO("info message");
+  log->LOG_WARNING("warning");
+  log->LOG_ERROR("error", "1");
+
 
   getchar();
   
-  StopLog();
+  delete log;
 
 	return 0;
 }

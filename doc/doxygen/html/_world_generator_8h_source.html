@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>ORBS: C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/WorldGenerator/WorldGenerator/inc/WorldGenerator.h Source File</title>
+<title>ORBS: C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/prj/WorldGenerator/WorldGenerator/inc/WorldGenerator.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -80,7 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c668fbeb3b948e7c1549700c9f312b4f.html">WorldGenerator</a></li><li class="navelem"><a class="el" href="dir_6b7ca04bf3446413b7f2ff323706e766.html">WorldGenerator</a></li><li class="navelem"><a class="el" href="dir_4c952dd23fd9acf4229072a501f4c19e.html">inc</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_33f82701177d68100ae618bc5173b6b8.html">prj</a></li><li class="navelem"><a class="el" href="dir_970bd597d3881ddc8d467dcb04fcd401.html">WorldGenerator</a></li><li class="navelem"><a class="el" href="dir_5916946649ed5d731ae5df6f6df50ecc.html">WorldGenerator</a></li><li class="navelem"><a class="el" href="dir_acf52f0066e290d2ae35b3b40c9bc71b.html">inc</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -109,27 +110,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_world_generator.html">WorldGenerator</a>();</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">static</span> <span class="comment">/*WORLDGENERATOR_API*/</span> <a class="code" href="class_world_generator.html">WorldGenerator</a>* getInstance();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <a class="code" href="struct_parameter_container.html">ParameterContainer</a> get_world_parameters();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordtype">bool</span> set_world_parameters(<a class="code" href="struct_parameter_container.html">ParameterContainer</a> world_parameters);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordtype">bool</span> doTheGodJob();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">static</span> <a class="code" href="class_world_generator.html">WorldGenerator</a> *instance_; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="class_universe.html">Universe</a> *universe_; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="struct_parameter_container.html">ParameterContainer</a> *world_parameters_; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">extern</span> WORLDGENERATOR_API <span class="keywordtype">int</span> nWorldGenerator;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;WORLDGENERATOR_API <span class="keywordtype">int</span> fnWorldGenerator(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ~<a class="code" href="class_world_generator.html">WorldGenerator</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">static</span> <span class="comment">/*WORLDGENERATOR_API*/</span> <a class="code" href="class_world_generator.html">WorldGenerator</a>* getInstance();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <a class="code" href="struct_parameter_container.html">ParameterContainer</a> get_world_parameters();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordtype">bool</span> set_world_parameters(<a class="code" href="struct_parameter_container.html">ParameterContainer</a> world_parameters);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordtype">bool</span> doTheGodJob();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keyword">static</span> <a class="code" href="class_world_generator.html">WorldGenerator</a> *instance_; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_universe.html">Universe</a> *universe_; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="struct_parameter_container.html">ParameterContainer</a> *world_parameters_; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">extern</span> WORLDGENERATOR_API <span class="keywordtype">int</span> nWorldGenerator;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;WORLDGENERATOR_API <span class="keywordtype">int</span> fnWorldGenerator(<span class="keywordtype">void</span>);</div>
 <div class="ttc" id="struct_parameter_container_html"><div class="ttname"><a href="struct_parameter_container.html">ParameterContainer</a></div><div class="ttdoc">a struct parameters, which are needed for world generation </div><div class="ttdef"><b>Definition:</b> ParameterContainer.h:18</div></div>
 <div class="ttc" id="class_universe_html"><div class="ttname"><a href="class_universe.html">Universe</a></div><div class="ttdoc">contains functions for the creation of the universe </div><div class="ttdef"><b>Definition:</b> Universe.h:22</div></div>
 <div class="ttc" id="class_world_generator_html"><div class="ttname"><a href="class_world_generator.html">WorldGenerator</a></div><div class="ttdoc">represents the entry point of the world generation process. contains functions to exchange ParameterC...</div><div class="ttdef"><b>Definition:</b> WorldGenerator.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 28 2013 01:51:06 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 9 2013 15:26:40 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
