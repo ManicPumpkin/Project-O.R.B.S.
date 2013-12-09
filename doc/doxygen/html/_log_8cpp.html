@@ -91,29 +91,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>This file contains the function defenitions of class <a class="el" href="class_log.html" title="This class contains all functions for the log system. ">Log</a>.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;stdafx.h&quot;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
 <code>#include &lt;fstream&gt;</code><br/>
 <code>#include &lt;sstream&gt;</code><br/>
 <code>#include &lt;time.h&gt;</code><br/>
 <code>#include &quot;<a class="el" href="_log_8h_source.html">Log.h</a>&quot;</code><br/>
 </div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains the function defenitions of class <a class="el" href="class_log.html" title="This class contains all functions for the log system. ">Log</a>. </p>
-<pre class="fragment">    The log system writes errors, warnings, infos and debug messages into
-    a HTML file. For the log system to write debug messages there must be
-    set the varbiable Log::debug_mode_ to true. Otherwise the log system
-    will ignore all messages sent by Log::LOG_DEBUG().
-    To get a proper HTML file, one has to be sure to call the 
-    deconstructor of this class. To write messages use following 
-    functions:
-    LOG_DEBUG(std::string msg), 
-    LOG_INFO(std::string msg), 
-    LOG_WARNING(std::string msg), 
-    LOG_ERROR(std::string msg, string id).
-</pre> <dl class="section author"><dt>Author</dt><dd>drubner, mwilhelm </dd></dl>
+<p>The log system writes errors, warnings, infos and debug messages into a HTML file. For the log system to write debug messages, there must be set the varbiable Log::debug_mode_ to true. Otherwise the log system will ignore all messages sent by <a class="el" href="class_log.html#a3af4278e101ea9da1a29251d62ea00c7" title="Logs a debug message. ">Log::LOG_DEBUG()</a>. To get a proper HTML file, one has to be sure to call the deconstructor of this class. To write messages use following functions: <a class="el" href="class_log.html#a3af4278e101ea9da1a29251d62ea00c7" title="Logs a debug message. ">Log::LOG_DEBUG(std::string msg)</a>, <a class="el" href="class_log.html#ad08d13b8977b9857aae926f7afd57b12" title="Logs an info message. ">Log::LOG_INFO(std::string msg)</a>, <a class="el" href="class_log.html#a512daa3070c737780510f0716ebcf635" title="Logs a warning. ">Log::LOG_WARNING(std::string msg)</a> and Log::LOG_ERROR(std::string msg, string id). For convenience, there are global functions with the same names. So instead of writing </p>
+<div class="fragment"><div class="line"><a class="code" href="class_log.html">Log</a>-&gt;<a class="code" href="class_log.html#ad08d13b8977b9857aae926f7afd57b12">LOG_INFO</a>(<span class="stringliteral">&quot;this works fine&quot;</span>);</div>
+</div><!-- fragment --><p> you may write </p>
+<div class="fragment"><div class="line">LOG_INFO(<span class="stringliteral">&quot;this works fine&quot;</span>);</div>
+</div><!-- fragment --> <dl class="section author"><dt>Author</dt><dd>drubner, mwilhelm </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2012-08-14 </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 9 2013 16:00:52 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 9 2013 21:47:48 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

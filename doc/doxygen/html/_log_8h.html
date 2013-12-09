@@ -85,7 +85,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Log.h File Reference</div>  </div>
 </div><!--header-->
@@ -107,26 +108,34 @@ Macros</h2></td></tr>
 <tr class="memitem:a6ee7e460d573576a667f45982e985163"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ee7e460d573576a667f45982e985163"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_API</b>&#160;&#160;&#160;__declspec(dllimport)</td></tr>
 <tr class="separator:a6ee7e460d573576a667f45982e985163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae57be34758dd1890e7a639de06ffa5ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae57be34758dd1890e7a639de06ffa5ba"></a>
+LOG_API bool&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_DEBUG</b> (std::string msg)</td></tr>
+<tr class="separator:ae57be34758dd1890e7a639de06ffa5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53070d5b2d52c08c05e01f867b316899"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a53070d5b2d52c08c05e01f867b316899"></a>
+LOG_API bool&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_INFO</b> (std::string msg)</td></tr>
+<tr class="separator:a53070d5b2d52c08c05e01f867b316899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c47e4a30e4d587416245d9660262d61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c47e4a30e4d587416245d9660262d61"></a>
+LOG_API bool&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_WARNING</b> (std::string msg)</td></tr>
+<tr class="separator:a1c47e4a30e4d587416245d9660262d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eedfca501e3431489e87a7ab34553a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eedfca501e3431489e87a7ab34553a8"></a>
+LOG_API bool&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_ERROR</b> (std::string msg, std::string id)</td></tr>
+<tr class="separator:a1eedfca501e3431489e87a7ab34553a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains a class for an abstract log system. </p>
-<pre class="fragment">    The log system writes errors, warnings, infos and debug messages into
-    a HTML file. For the log system to write debug messages there must be
-    set the varbiable Log::debug_mode_ to true. Otherwise the log system
-    will ignore all messages sent by Log::LOG_DEBUG().
-    To get a proper HTML file, one has to be sure to call the 
-    deconstructor of this class. To write messages use following 
-    functions:
-    LOG_DEBUG(std::string msg), 
-    LOG_INFO(std::string msg), 
-    LOG_WARNING(std::string msg), 
-    LOG_ERROR(std::string msg, string id).
-</pre> <dl class="section author"><dt>Author</dt><dd>drubner, mwilhelm </dd></dl>
+<p>The log system writes errors, warnings, infos and debug messages into a HTML file. For the log system to write debug messages, there must be set the varbiable Log::debug_mode_ to true. Otherwise the log system will ignore all messages sent by <a class="el" href="class_log.html#a3af4278e101ea9da1a29251d62ea00c7" title="Logs a debug message. ">Log::LOG_DEBUG()</a>. To get a proper HTML file, one has to be sure to call the deconstructor of this class. To write messages use following functions: <a class="el" href="class_log.html#a3af4278e101ea9da1a29251d62ea00c7" title="Logs a debug message. ">Log::LOG_DEBUG(std::string msg)</a>, <a class="el" href="class_log.html#ad08d13b8977b9857aae926f7afd57b12" title="Logs an info message. ">Log::LOG_INFO(std::string msg)</a>, <a class="el" href="class_log.html#a512daa3070c737780510f0716ebcf635" title="Logs a warning. ">Log::LOG_WARNING(std::string msg)</a> and Log::LOG_ERROR(std::string msg, string id). For convenience, there are global functions with the same names. So instead of writing </p>
+<div class="fragment"><div class="line"><a class="code" href="class_log.html">Log</a>-&gt;<a class="code" href="class_log.html#ad08d13b8977b9857aae926f7afd57b12">LOG_INFO</a>(<span class="stringliteral">&quot;this works fine&quot;</span>);</div>
+</div><!-- fragment --><p> you may write </p>
+<div class="fragment"><div class="line">LOG_INFO(<span class="stringliteral">&quot;this works fine&quot;</span>);</div>
+</div><!-- fragment --> <dl class="section author"><dt>Author</dt><dd>drubner, mwilhelm </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2012-08-15 </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 9 2013 16:00:52 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 9 2013 21:47:48 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

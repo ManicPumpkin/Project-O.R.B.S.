@@ -83,7 +83,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_log-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Log Class Reference</div>  </div>
@@ -97,39 +99,249 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aef48ac0fa78a4c1b43bb281144c907a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef48ac0fa78a4c1b43bb281144c907a6"></a>
-LOG_API&#160;</td><td class="memItemRight" valign="bottom"><b>Log</b> (std::string &amp;path, std::string &amp;file_name)</td></tr>
-<tr class="separator:aef48ac0fa78a4c1b43bb281144c907a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa450b7435e7049d85afbae45b9642274"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa450b7435e7049d85afbae45b9642274"></a>
-LOG_API void&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_DEBUG</b> (std::string msg)</td></tr>
-<tr class="separator:aa450b7435e7049d85afbae45b9642274"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfab2433c1eb46a78e27446506ad2eb5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfab2433c1eb46a78e27446506ad2eb5"></a>
-LOG_API void&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_INFO</b> (std::string msg)</td></tr>
-<tr class="separator:abfab2433c1eb46a78e27446506ad2eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4010e56d8e523c0a5f2b92e92676192a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4010e56d8e523c0a5f2b92e92676192a"></a>
-LOG_API void&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_WARNING</b> (std::string msg)</td></tr>
-<tr class="separator:a4010e56d8e523c0a5f2b92e92676192a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2700eb2c8f3e0169dab13c080527468"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2700eb2c8f3e0169dab13c080527468"></a>
-LOG_API void&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_ERROR</b> (std::string msg, std::string id)</td></tr>
-<tr class="separator:ac2700eb2c8f3e0169dab13c080527468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fbfda88fbee5027c89f6eb121059360"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fbfda88fbee5027c89f6eb121059360"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#a0fbfda88fbee5027c89f6eb121059360">~Log</a> ()</td></tr>
+<tr class="memdesc:a0fbfda88fbee5027c89f6eb121059360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br/></td></tr>
+<tr class="separator:a0fbfda88fbee5027c89f6eb121059360"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e4fa27b81705aa6c3e368f15fc0480"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#a21e4fa27b81705aa6c3e368f15fc0480">set_file_path_and_name</a> (std::string &amp;path, std::string &amp;file_name)</td></tr>
+<tr class="memdesc:a21e4fa27b81705aa6c3e368f15fc0480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the path and file name of the file where the logs are written.  <a href="#a21e4fa27b81705aa6c3e368f15fc0480">More...</a><br/></td></tr>
+<tr class="separator:a21e4fa27b81705aa6c3e368f15fc0480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af4278e101ea9da1a29251d62ea00c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#a3af4278e101ea9da1a29251d62ea00c7">LOG_DEBUG</a> (std::string msg)</td></tr>
+<tr class="memdesc:a3af4278e101ea9da1a29251d62ea00c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a debug message.  <a href="#a3af4278e101ea9da1a29251d62ea00c7">More...</a><br/></td></tr>
+<tr class="separator:a3af4278e101ea9da1a29251d62ea00c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad08d13b8977b9857aae926f7afd57b12"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#ad08d13b8977b9857aae926f7afd57b12">LOG_INFO</a> (std::string msg)</td></tr>
+<tr class="memdesc:ad08d13b8977b9857aae926f7afd57b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an info message.  <a href="#ad08d13b8977b9857aae926f7afd57b12">More...</a><br/></td></tr>
+<tr class="separator:ad08d13b8977b9857aae926f7afd57b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a512daa3070c737780510f0716ebcf635"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#a512daa3070c737780510f0716ebcf635">LOG_WARNING</a> (std::string msg)</td></tr>
+<tr class="memdesc:a512daa3070c737780510f0716ebcf635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a warning.  <a href="#a512daa3070c737780510f0716ebcf635">More...</a><br/></td></tr>
+<tr class="separator:a512daa3070c737780510f0716ebcf635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65bbf0bafe544c57060fdcb934ac20b2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#a65bbf0bafe544c57060fdcb934ac20b2">LOG_ERROR</a> (std::string msg, std::string id)</td></tr>
+<tr class="memdesc:a65bbf0bafe544c57060fdcb934ac20b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs an error message and id.  <a href="#a65bbf0bafe544c57060fdcb934ac20b2">More...</a><br/></td></tr>
+<tr class="separator:a65bbf0bafe544c57060fdcb934ac20b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a987f3ff401eea783d0e80daaea1d7aca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_log.html">Log</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#a987f3ff401eea783d0e80daaea1d7aca">getInstance</a> ()</td></tr>
+<tr class="memdesc:a987f3ff401eea783d0e80daaea1d7aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a singleton instance of <a class="el" href="class_log.html" title="This class contains all functions for the log system. ">Log</a>.  <a href="#a987f3ff401eea783d0e80daaea1d7aca">More...</a><br/></td></tr>
+<tr class="separator:a987f3ff401eea783d0e80daaea1d7aca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a12ba1925c1d6b0d363cafbca538da3e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12ba1925c1d6b0d363cafbca538da3e6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>debug_mode_</b> = false</td></tr>
 <tr class="separator:a12ba1925c1d6b0d363cafbca538da3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af6071a60aa52b6c1b511f99b4bc1b8fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af6071a60aa52b6c1b511f99b4bc1b8fe"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_log.html#af6071a60aa52b6c1b511f99b4bc1b8fe">Log</a> ()</td></tr>
+<tr class="memdesc:af6071a60aa52b6c1b511f99b4bc1b8fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br/></td></tr>
+<tr class="separator:af6071a60aa52b6c1b511f99b4bc1b8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class contains all functions for the log system. </p>
-<p>The log system writes errors, warnings, infos and debug messages into a HTML file. For the log system to write debug messages there must be set the varbiable Log::debug_mode_ to true. Otherwise the log system will ignore all messages sent by Log::LOG_DEBUG(). To get a proper HTML file, one has to be sure to call the deconstructor of this class. To write messages use following functions: LOG_DEBUG(std::string msg), LOG_INFO(std::string msg), LOG_WARNING(std::string msg), LOG_ERROR(std::string msg, string id). </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<p>The log system writes errors, warnings, infos and debug messages into a HTML file. For the log system to write debug messages, there must be set the varbiable Log::debug_mode_ to true. Otherwise the log system will ignore all messages sent by <a class="el" href="class_log.html#a3af4278e101ea9da1a29251d62ea00c7" title="Logs a debug message. ">Log::LOG_DEBUG()</a>. To get a proper HTML file, one has to be sure to call the deconstructor of this class. To write messages use following functions: <a class="el" href="class_log.html#a3af4278e101ea9da1a29251d62ea00c7" title="Logs a debug message. ">Log::LOG_DEBUG(std::string msg)</a>, <a class="el" href="class_log.html#ad08d13b8977b9857aae926f7afd57b12" title="Logs an info message. ">Log::LOG_INFO(std::string msg)</a>, <a class="el" href="class_log.html#a512daa3070c737780510f0716ebcf635" title="Logs a warning. ">Log::LOG_WARNING(std::string msg)</a> and Log::LOG_ERROR(std::string msg, string id). For convenience, there are global functions with the same names. So instead of writing </p>
+<div class="fragment"><div class="line"><a class="code" href="class_log.html">Log</a>-&gt;<a class="code" href="class_log.html#ad08d13b8977b9857aae926f7afd57b12">LOG_INFO</a>(<span class="stringliteral">&quot;this works fine&quot;</span>);</div>
+</div><!-- fragment --><p> you may write </p>
+<div class="fragment"><div class="line"><a class="code" href="class_log.html#ad08d13b8977b9857aae926f7afd57b12">LOG_INFO</a>(<span class="stringliteral">&quot;this works fine&quot;</span>);</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a987f3ff401eea783d0e80daaea1d7aca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_log.html">Log</a> * Log::getInstance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a singleton instance of <a class="el" href="class_log.html" title="This class contains all functions for the log system. ">Log</a>. </p>
+<p>When a new instance of <a class="el" href="class_log.html" title="This class contains all functions for the log system. ">Log</a> was created during the call of this function, you should call <a class="el" href="class_log.html#a21e4fa27b81705aa6c3e368f15fc0480" title="Sets the path and file name of the file where the logs are written. ">set_file_path_and_name()</a> right after it. At least you should call <a class="el" href="class_log.html#a21e4fa27b81705aa6c3e368f15fc0480" title="Sets the path and file name of the file where the logs are written. ">set_file_path_and_name()</a> before your first loggin attempt. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a singleton <a class="el" href="class_log.html" title="This class contains all functions for the log system. ">Log</a> instance. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3af4278e101ea9da1a29251d62ea00c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Log::LOG_DEBUG </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a debug message. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 = OK, 0 = Error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a65bbf0bafe544c57060fdcb934ac20b2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Log::LOG_ERROR </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs an error message and id. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 = OK, 0 = Error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad08d13b8977b9857aae926f7afd57b12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Log::LOG_INFO </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs an info message. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 = OK, 0 = Error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a512daa3070c737780510f0716ebcf635"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Log::LOG_WARNING </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs a warning. </p>
+<dl class="section return"><dt>Returns</dt><dd>1 = OK, 0 = Error </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a21e4fa27b81705aa6c3e368f15fc0480"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Log::set_file_path_and_name </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>file_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the path and file name of the file where the logs are written. </p>
+<p>This method has to get called before the first logging. As long as this function wasn't called with valid parameters, the initialisation of the log system is not completed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&amp;path</td><td>new path </td></tr>
+    <tr><td class="paramname">&amp;file_name</td><td>new file name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/prj/Log/inc/<a class="el" href="_log_8h_source.html">Log.h</a></li>
 <li>C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/prj/Log/src/<a class="el" href="_log_8cpp.html">Log.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 9 2013 16:00:52 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 9 2013 21:47:48 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

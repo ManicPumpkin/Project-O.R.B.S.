@@ -16,10 +16,10 @@
 WorldGenerator* WorldGenerator::instance_ = 0;
 
 //=============================================================================
-// FUNCTIONS
+// (DE)CONSTRUCTORS
 //=============================================================================
 /**
-  @fn     WorldGenerator :: WorldGenerator
+  @fn     WorldGenerator::WorldGenerator()
   @brief  default constructor
 **/
 //=============================================================================
@@ -40,7 +40,7 @@ WorldGenerator::WorldGenerator()
 
 //=============================================================================
 /**
-  @fn     WorldGenerator :: ~WorldGenerator
+  @fn     WorldGenerator::~WorldGenerator()
   @brief  destructor
 **/
 //=============================================================================
@@ -55,8 +55,10 @@ WorldGenerator::~WorldGenerator() {
 }
 
 //=============================================================================
+// FUNCTIONS
+//=============================================================================
 /**
-@fn     WorldGenerator :: getInstance
+@fn     WorldGenerator::getInstance()
 @brief  returns the singleton instance of WorldGenerator
 @return singleton instance of WorldGenerator
 **/
@@ -74,7 +76,7 @@ WorldGenerator* WorldGenerator::getInstance() {
 
 //=============================================================================
 /**
-@fn     WorldGenerator :: get_world_parameters
+@fn     WorldGenerator::get_world_parameters()
 @brief  getter for world_parameters_
 @return world_parameters
 **/
@@ -92,7 +94,7 @@ ParameterContainer WorldGenerator::get_world_parameters() {
 
 //=============================================================================
 /**
-@fn     WorldGenerator :: set_world_parameters
+@fn     WorldGenerator::set_world_parameters()
 @brief  setter for world_parameters_
 @param  world_parameters    contains the new world parameters
 @return 1 = OK; 0 = Error
@@ -113,7 +115,7 @@ bool WorldGenerator::set_world_parameters(ParameterContainer world_parameters) {
 
 //=============================================================================
 /**
-@fn     WorldGenerator :: doTheGodJob
+@fn     WorldGenerator::doTheGodJob()
 @brief  starts the universe generation process
 @return 1 = OK; 0 = Error
 **/

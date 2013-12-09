@@ -1,32 +1,44 @@
+//=============================================================================
 /**
   @file   Unvierse.cpp
   @brief  contains the function definitions of the class Universe
   @author mwilhelm
   @date   2013-11-27
 **/
-
+//=============================================================================
+// INCLUDES
+//=============================================================================
 #include "stdafx.h"
 #include <random>
 
+//=============================================================================
+// NAMESPACES
+//=============================================================================
 using namespace GlobalEnums;
 using namespace std;
 
+//=============================================================================
+// (DE)CONSTRUCTORS
+//=============================================================================
 /**
-  @fn     Universe :: Universe
-  @brief  default constructor
+  fn     Universe::Universe()
+  brief  default constructor
 **/
+//=============================================================================
 /*Universe::Universe() {
 #ifdef DEBUG_MODE
   std::cout << "entered Universe::Universe()" << std::endl;
 #endif
 }*/
 
+//=============================================================================
 /**
-  @fn     Universe :: Universe
+  @fn     Universe::Universe()
   @brief  constructor
   @param  *parent    pointer to parent
 **/
-/*inline*/ Universe::Universe(WorldGenerator *parent) {
+//=============================================================================
+Universe::Universe(WorldGenerator *parent) {
 #ifdef DEBUG_MODE
   std::cout << "entered: Universe::Universe(WorldGenerator *parent)" << std::endl;
 #endif
@@ -34,10 +46,12 @@ using namespace std;
   init();
 }
 
+//=============================================================================
 /**
-  @fn     Universe :: ~Universe
+  @fn     Universe::~Universe()
   @brief  destructor
 **/
+//=============================================================================
 Universe::~Universe() {
 #ifdef DEBUG_MODE
   std::cout << "entered Universe::~Universe()" << std::endl;
@@ -49,11 +63,15 @@ Universe::~Universe() {
   parent_ = NULL;
 }
 
+//=============================================================================
+// FUNCTIONS
+//=============================================================================
 /**
-  @fn     Universe ::generateWorld
-  @brief  starts the world generation routine
+  @fn     Universe::generateWorld()
+  @brief  Starts the world generation routine.
   @return 1 = OK; 0 = Error
 **/
+//=============================================================================
 bool Universe::generateWorld() {
 #ifdef DEBUG_MODE
   std::cout << "entered Universe::generateWorld()" << std::endl;
@@ -94,11 +112,13 @@ bool Universe::generateWorld() {
   return 0; // TODO correct it
 }
 
+//=============================================================================
 /**
-@fn     Universe :: init
+@fn     Universe::init()
 @brief  initializes members
 @return 1 = OK; 0 = Error
 **/
+//=============================================================================
 bool Universe::init() {
 #ifdef DEBUG_MODE
   std::cout << "entered Universe::init()" << std::endl;
@@ -118,11 +138,13 @@ bool Universe::init() {
   return result;
 }
 
+//=============================================================================
 /**
-@fn     Universe :: generateOrb
+@fn     Universe::generateOrb()
 @brief  generate a instance of class Orb
 @return the new instance of class Orb
 **/
+//=============================================================================
 Orb* Universe::generateOrb() {
 #ifdef DEBUG_MODE
   std::cout << "entered Universe::generateOrb()" << std::endl;
@@ -137,11 +159,13 @@ Orb* Universe::generateOrb() {
   return new Orb(random_biome);
 }
 
+//=============================================================================
 /**
-@fn     Universe :: generateOrbConnections
+@fn     Universe::generateOrbConnections()
 @brief  generates connections between orbs
 @return 1 = OK; 0 = Error
 **/
+//=============================================================================
 bool Universe::generateOrbConnection() {
 #ifdef DEBUG_MODE
   std::cout << "entered Universe::generateOrbConnection()" << std::endl;
@@ -163,11 +187,13 @@ bool Universe::setStartOrb() {
   return 0;  //TODO  implement
 }
 
+//=============================================================================
 /**
-@fn     Universe :: insertBosses
+@fn     Universe::insertBosses()
 @brief  places bosses in orbs
 @return 1 = OK; 0 = Error
 **/
+//=============================================================================
 bool Universe::insertBosses() {
 #ifdef DEBUG_MODE
   std::cout << "entered Universe::insertBosses()" << std::endl;
@@ -176,11 +202,13 @@ bool Universe::insertBosses() {
   return 0; //TODO  implement
 }
 
+//=============================================================================
 /**
-@fn     Universe :: insertEvents
+@fn     Universe::insertEvents()
 @brief  places events in orbs
 @return 1 = OK; 0 = Error
 **/
+//=============================================================================
 bool Universe::insertEvents() {
 #ifdef DEBUG_MODE
   std::cout << "entered Universe::insertEvents()" << std::endl;
