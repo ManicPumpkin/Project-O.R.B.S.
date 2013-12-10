@@ -1,0 +1,11 @@
+digraph "C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/prj/LogTestingApplication/src" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6c64c391a859428f7f40635a94adcbb9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="LogTestingApplication" fontname="Helvetica", fontsize="10", URL="dir_6c64c391a859428f7f40635a94adcbb9.html"]
+  dir_f98b09d60a13d32e457e837907b7df89 [shape=box, label="src", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f98b09d60a13d32e457e837907b7df89.html"];
+  }
+  dir_da74a047192740920ae74e150cd1d7b0 [shape=box label="Log" fillcolor="white" style="filled" color="red" URL="dir_da74a047192740920ae74e150cd1d7b0.html"];
+  dir_f98b09d60a13d32e457e837907b7df89->dir_da74a047192740920ae74e150cd1d7b0 [headlabel="1", labeldistance=1.5 headhref="dir_000013_000001.html"];
+}

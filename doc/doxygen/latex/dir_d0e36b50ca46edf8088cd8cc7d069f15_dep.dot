@@ -1,0 +1,14 @@
+digraph "C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/prj/ORBS" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_33f82701177d68100ae618bc5173b6b8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="prj" fontname="Helvetica", fontsize="10", URL="dir_33f82701177d68100ae618bc5173b6b8.html"]
+  subgraph clusterdir_d0e36b50ca46edf8088cd8cc7d069f15 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d0e36b50ca46edf8088cd8cc7d069f15.html"];
+    dir_d0e36b50ca46edf8088cd8cc7d069f15 [shape=plaintext label="ORBS"];
+    dir_c055d4f91be058f06ee1545ef06e88e5 [shape=box label="inc" color="black" fillcolor="white" style="filled" URL="dir_c055d4f91be058f06ee1545ef06e88e5.html"];
+    dir_e86686e468f1de1b734f51f6732f8ecd [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_e86686e468f1de1b734f51f6732f8ecd.html"];
+  }
+  }
+}

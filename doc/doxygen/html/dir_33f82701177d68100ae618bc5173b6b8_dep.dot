@@ -1,0 +1,17 @@
+digraph "C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/prj" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_33f82701177d68100ae618bc5173b6b8 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_33f82701177d68100ae618bc5173b6b8.html"];
+    dir_33f82701177d68100ae618bc5173b6b8 [shape=plaintext label="prj"];
+    dir_da74a047192740920ae74e150cd1d7b0 [shape=box label="Log" color="red" fillcolor="white" style="filled" URL="dir_da74a047192740920ae74e150cd1d7b0.html"];
+    dir_6c64c391a859428f7f40635a94adcbb9 [shape=box label="LogTestingApplication" color="red" fillcolor="white" style="filled" URL="dir_6c64c391a859428f7f40635a94adcbb9.html"];
+    dir_d0e36b50ca46edf8088cd8cc7d069f15 [shape=box label="ORBS" color="red" fillcolor="white" style="filled" URL="dir_d0e36b50ca46edf8088cd8cc7d069f15.html"];
+    dir_970bd597d3881ddc8d467dcb04fcd401 [shape=box label="WorldGenerator" color="red" fillcolor="white" style="filled" URL="dir_970bd597d3881ddc8d467dcb04fcd401.html"];
+    dir_4d2a905a0e811bf39b586eee1fddc148 [shape=box label="WorldGeneratorTestingApplication" color="red" fillcolor="white" style="filled" URL="dir_4d2a905a0e811bf39b586eee1fddc148.html"];
+  }
+  dir_6c64c391a859428f7f40635a94adcbb9->dir_da74a047192740920ae74e150cd1d7b0 [headlabel="1", labeldistance=1.5 headhref="dir_000003_000001.html"];
+  dir_4d2a905a0e811bf39b586eee1fddc148->dir_da74a047192740920ae74e150cd1d7b0 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000001.html"];
+  dir_970bd597d3881ddc8d467dcb04fcd401->dir_da74a047192740920ae74e150cd1d7b0 [headlabel="1", labeldistance=1.5 headhref="dir_000007_000001.html"];
+}
