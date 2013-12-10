@@ -302,3 +302,7 @@ bool Log::LOG_ERROR(std::string msg, std::string id) {
 }
 
 //LOG_API void LOG_MSGBOXERR(LPCSTR msg, LPCSTR id) { MessageBox(NULL, msg, id, MB_OK | MB_ICONERROR); }
+
+
+
+
