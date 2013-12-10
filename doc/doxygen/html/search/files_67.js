@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['globals_2eh',['Globals.h',['../_globals_8h.html',1,'']]]
+  ['globalenums_2eh',['GlobalEnums.h',['../_global_enums_8h.html',1,'']]]
 ];

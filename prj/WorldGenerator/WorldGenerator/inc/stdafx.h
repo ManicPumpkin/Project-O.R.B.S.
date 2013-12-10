@@ -1,3 +1,4 @@
+//=============================================================================
 /**
   @file   stdafx.h
   @brief  include file for standard system include files,
@@ -6,9 +7,14 @@
   @author mwilhelm
   @date   2013-11-27
 **/
-
+//=============================================================================
+// INCLUDE GUARD
+//=============================================================================
 #pragma once
 
+//=============================================================================
+// INCLUDES
+//=============================================================================
 #include "targetver.h"
 
 #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
@@ -24,8 +30,11 @@
 #include "Universe.h"
 #include "ParameterContainer.h"
 #include "Orb.h"
-//#include "Globals.h"
 #include "GlobalEnums.h"
 
 // TODO comment for release
-#define DEBUG_MODE
+//#define DEBUG_MODE true;
+
+
+// needs to be included after the defines
+#include "..\..\..\Log\inc\Log.h"

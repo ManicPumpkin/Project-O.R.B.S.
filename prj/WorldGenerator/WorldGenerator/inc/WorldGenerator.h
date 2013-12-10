@@ -44,7 +44,3 @@ class WORLDGENERATOR_API WorldGenerator {
     Universe *universe_; //!< stores the universe
     ParameterContainer *world_parameters_; //!< parameter container to exchange parameters with the calling application
 };
-
-extern WORLDGENERATOR_API int nWorldGenerator;
-
-WORLDGENERATOR_API int fnWorldGenerator(void);

@@ -1,0 +1,31 @@
+\hypertarget{_log_8cpp}{\section{C\-:/\-Users/\-Marco/\-Workspace/\-Git\-Hub/\-O\-R\-B\-S/\-Project-\/\-O.R.\-B.\-S/prj/\-Log/src/\-Log.cpp File Reference}
+\label{_log_8cpp}\index{C\-:/\-Users/\-Marco/\-Workspace/\-Git\-Hub/\-O\-R\-B\-S/\-Project-\/\-O.\-R.\-B.\-S/prj/\-Log/src/\-Log.\-cpp@{C\-:/\-Users/\-Marco/\-Workspace/\-Git\-Hub/\-O\-R\-B\-S/\-Project-\/\-O.\-R.\-B.\-S/prj/\-Log/src/\-Log.\-cpp}}
+}
+
+
+This file contains the function defenitions of class \hyperlink{class_log}{Log}.  
+
+
+{\ttfamily \#include \char`\"{}stdafx.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Log.\-h\char`\"{}}\\*
+
+
+\subsection{Detailed Description}
+This file contains the function defenitions of class \hyperlink{class_log}{Log}. The log system writes errors, warnings, infos and debug messages into a H\-T\-M\-L file. For the log system to write debug messages, there must be set the varbiable Log\-::debug\-\_\-mode\-\_\- to true. Otherwise the log system will ignore all messages sent by \hyperlink{class_log_a3af4278e101ea9da1a29251d62ea00c7}{Log\-::\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G()}. To get a proper H\-T\-M\-L file, one has to be sure to call the deconstructor of this class. To write messages use following functions\-: \hyperlink{class_log_a3af4278e101ea9da1a29251d62ea00c7}{Log\-::\-L\-O\-G\-\_\-\-D\-E\-B\-U\-G(std\-::string msg)}, \hyperlink{class_log_ad08d13b8977b9857aae926f7afd57b12}{Log\-::\-L\-O\-G\-\_\-\-I\-N\-F\-O(std\-::string msg)}, \hyperlink{class_log_a512daa3070c737780510f0716ebcf635}{Log\-::\-L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G(std\-::string msg)} and Log\-::\-L\-O\-G\-\_\-\-E\-R\-R\-O\-R(std\-::string msg, string id). For convenience, there are global functions with the same names. So instead of writing 
+\begin{DoxyCode}
+\hyperlink{class_log}{Log}->\hyperlink{class_log_ad08d13b8977b9857aae926f7afd57b12}{LOG\_INFO}(\textcolor{stringliteral}{"this works fine"});
+\end{DoxyCode}
+ you may write 
+\begin{DoxyCode}
+LOG\_INFO(\textcolor{stringliteral}{"this works fine"});
+\end{DoxyCode}
+ \begin{DoxyAuthor}{Author}
+drubner, mwilhelm 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08-\/14 
+\end{DoxyDate}

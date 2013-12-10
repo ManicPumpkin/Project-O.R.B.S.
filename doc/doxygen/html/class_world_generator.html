@@ -38,7 +38,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -71,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -92,13 +91,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>represents the entry point of the world generation process. contains functions to exchange <a class="el" href="struct_parameter_container.html" title="a struct parameters, which are needed for world generation ">ParameterContainer</a> with the calling application. this class is exported from the WorldGenerator.dll  
+<p>represents the entry point of the world generation process. contains functions to exchange <a class="el" href="struct_parameter_container.html" title="A struct of parameters, which are needed for world generation. ">ParameterContainer</a> with the calling application. this class is exported from the WorldGenerator.dll  
  <a href="class_world_generator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_world_generator_8h_source.html">WorldGenerator.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:afed7aa2e501ab283bb41bbaa6fbdf24a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afed7aa2e501ab283bb41bbaa6fbdf24a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_generator.html#afed7aa2e501ab283bb41bbaa6fbdf24a">~WorldGenerator</a> ()</td></tr>
+<tr class="memdesc:afed7aa2e501ab283bb41bbaa6fbdf24a"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructor <br/></td></tr>
+<tr class="separator:afed7aa2e501ab283bb41bbaa6fbdf24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6f6491b8dae06d237f23616479c755f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_parameter_container.html">ParameterContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_world_generator.html#ae6f6491b8dae06d237f23616479c755f">get_world_parameters</a> ()</td></tr>
 <tr class="memdesc:ae6f6491b8dae06d237f23616479c755f"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for world_parameters_  <a href="#ae6f6491b8dae06d237f23616479c755f">More...</a><br/></td></tr>
 <tr class="separator:ae6f6491b8dae06d237f23616479c755f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,7 +126,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ac4f4abec2013abad54ec417e3b2b6d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>represents the entry point of the world generation process. contains functions to exchange <a class="el" href="struct_parameter_container.html" title="a struct parameters, which are needed for world generation ">ParameterContainer</a> with the calling application. this class is exported from the WorldGenerator.dll </p>
+<div class="textblock"><p>represents the entry point of the world generation process. contains functions to exchange <a class="el" href="struct_parameter_container.html" title="A struct of parameters, which are needed for world generation. ">ParameterContainer</a> with the calling application. this class is exported from the WorldGenerator.dll </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a6b5a256fd22a762b7e96b2d5e2b42be3"></a>
 <div class="memitem">
@@ -213,13 +216,13 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/WorldGenerator/WorldGenerator/inc/<a class="el" href="_world_generator_8h_source.html">WorldGenerator.h</a></li>
-<li>C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/WorldGenerator/WorldGenerator/src/WorldGenerator.cpp</li>
+<li>C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/prj/WorldGenerator/WorldGenerator/inc/<a class="el" href="_world_generator_8h_source.html">WorldGenerator.h</a></li>
+<li>C:/Users/Marco/Workspace/GitHub/ORBS/Project-O.R.B.S/prj/WorldGenerator/WorldGenerator/src/WorldGenerator.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 28 2013 01:51:06 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 9 2013 21:47:48 for ORBS by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
