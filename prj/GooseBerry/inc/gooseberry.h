@@ -124,7 +124,7 @@ namespace GB_Struct
 namespace GB_Func
 {
 	GOOSEBERRY_API GB_Enum::gbResult Initialize();
-	GOOSEBERRY_API GB_Enum::gbResult MessageLoop(GB_Enum::gbResult(*typ_render)(float));
+	GOOSEBERRY_API GB_Enum::gbResult MessageLoop(GB_Enum::gbResult(*func_render)(float));
 	GOOSEBERRY_API GB_Enum::gbResult Exit();
 
 	std::string ExtractName(std::string file);
