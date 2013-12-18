@@ -27,12 +27,23 @@ GB_OpenGL	g_open_gl;
 bool		g_render_init = FALSE;
 
 //==================================================================
+//	PREDEFINITION
+//==================================================================
+GB_Enum::gbResult Initialize();
+GB_Enum::gbResult Exit();
+GB_Enum::gbResult Load();
+GB_Enum::gbResult Unload();
+GB_Enum::gbResult Show(HWND hwnd);
+GB_Enum::gbResult Run();
+GB_Enum::gbResult Render(float time);
+
+//==================================================================
 //	MAIN
 //==================================================================
-int WINAPI WinMain(HINSTANCE h_instance, HINSTANCE h_prev_instance, PSTR cmd_line, int cmd_show)
+int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE h_prev_instance, PSTR cmd_line, int cmd_show)
 {
-	GB_Var::g_hinstance				= h_instance;
-	GB_Var::g_HWND					= NULL;
+	GB_Var::g_hinstance				= hinstance;
+	GB_Var::g_hwnd					= NULL;
 	GB_Var::g_wnd_title				= "GooseBerryTestApplication";
 	GB_Var::g_wnd_name				= "GooseBerryTestApplication";
 	GB_Var::g_wnd_width				= 800;
@@ -56,13 +67,17 @@ int WINAPI WinMain(HINSTANCE h_instance, HINSTANCE h_prev_instance, PSTR cmd_lin
 		GB_Func::Initialize();
 
 		//	initialize, show, run, exit
+		Initialize();
+		Show(GB_Var::g_hwnd);
+		Run();
+		Exit();
 
 		if(GB_Func::Exit())
 			throw GB_Exception(ERR_GB_EXIT_STR, ERR_GB_EXIT_ID);
 	}
 	catch (const GB_Exception &exception)
 	{
-		GB_LERROR(exception.GetStr(), exception.GetId());
+		LOG_ERROR(exception.GetStr(), exception.GetId());
 		GB_MSGBOXERR(exception.GetStr(), exception.GetId());
 	}
 
