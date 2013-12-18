@@ -5,6 +5,11 @@
 @date	2013-12-17
 **/
 //==================================================================
+//	PRAGMA
+//==================================================================
+#pragma comment(lib, "GooseBerry.lib")
+
+//==================================================================
 //	INCLUDE
 //==================================================================
 #include <iostream>
@@ -143,7 +148,7 @@ GB_Enum::gbResult Run()
 {
 	LOG_INFO("Run application");
 
-	if (GB_Func::MessageLoop(&::Render))
+	if (GB_Func::MessageLoop(Render))
 		LOG_ERROR(ERR_GB_MSGL_STR, ERR_GB_MSGL_ID);
 
 	return GB_Enum::GB_OK;
