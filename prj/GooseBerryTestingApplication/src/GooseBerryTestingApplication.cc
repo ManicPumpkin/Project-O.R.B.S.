@@ -89,17 +89,26 @@ GB_Enum::gbResult Exit()
 {
 	GB_LINFO("Exit application");
 
-	//if (unload())
-	//	throw GB_Exception(ERR_G_EXIT_STR, ERR_G_EXIT_ID);
+	if (unload())
+		throw GB_Exception(ERR_G_EXIT_STR, ERR_G_EXIT_ID);
 
 	return GB_Enum::GB_OK;
 }
 
 GB_Enum::gbResult load()
 {
-	GB_LDEBUG("Load game");
+	GB_LDEBUG("Load application");
 
 	//	load some stuff here ...
+
+	return GB_Enum::GB_OK;
+}
+
+GB_Enum::gbResult unload()
+{
+	GB_LDEBUG("Unload application");
+
+	//	unload some stuff here ...
 
 	return GB_Enum::GB_OK;
 }
