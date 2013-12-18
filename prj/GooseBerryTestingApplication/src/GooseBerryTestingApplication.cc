@@ -77,7 +77,7 @@ int WINAPI WinMain(HINSTANCE h_instance, HINSTANCE h_prev_instance, PSTR cmd_lin
 
 GB_Enum::gbResult Initialize()
 {
-	GB_LINFO("Initialize application");
+	LOG_INFO("Initialize application");
 	g_open_gl.StartWnd();
 
 	if (Load())
@@ -88,7 +88,7 @@ GB_Enum::gbResult Initialize()
 
 GB_Enum::gbResult Exit()
 {
-	GB_LINFO("Exit application");
+	LOG_INFO("Exit application");
 
 	if (Unload())
 		throw GB_Exception(ERR_G_EXIT_STR, ERR_G_EXIT_ID);
@@ -98,7 +98,7 @@ GB_Enum::gbResult Exit()
 
 GB_Enum::gbResult Load()
 {
-	GB_LDEBUG("Load application");
+	LOG_DEBUG("Load application");
 
 	//	load some stuff here ...
 
@@ -107,7 +107,7 @@ GB_Enum::gbResult Load()
 
 GB_Enum::gbResult Unload()
 {
-	GB_LDEBUG("Unload application");
+	LOG_DEBUG("Unload application");
 
 	//	unload some stuff here ...
 
@@ -116,7 +116,7 @@ GB_Enum::gbResult Unload()
 
 GB_Enum::gbResult Show(HWND hwnd)
 {
-	GB_LDEBUG("Showing window");
+	LOG_DEBUG("Showing window");
 	ShowWindow(hwnd, SW_SHOW);
 	SetForegroundWindow(hwnd);
 	SetFocus(hwnd);
@@ -126,7 +126,7 @@ GB_Enum::gbResult Show(HWND hwnd)
 
 GB_Enum::gbResult Run()
 {
-	GB_LINFO("Run application");
+	LOG_INFO("Run application");
 
 	//	enter message loop
 
@@ -138,7 +138,7 @@ GB_Enum::gbResult Render(float time)
 	if (!g_render_init)
 	{
 		g_render_init = TRUE;
-		GB_LDEBUG("Start render process");
+		LOG_DEBUG("Start render process");
 	}
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
