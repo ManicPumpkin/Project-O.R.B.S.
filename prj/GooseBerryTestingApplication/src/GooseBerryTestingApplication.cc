@@ -54,9 +54,10 @@ int WINAPI WinMain(HINSTANCE h_instance, HINSTANCE h_prev_instance, PSTR cmd_lin
 	{
 		GB_Func::Initialize();
 
+		//	initialize, show, run, exit
 
-
-		GB_Func::Exit();
+		if(GB_Func::Exit())
+			throw GB_Exception(ERR_GB_EXIT_STR, ERR_GB_EXIT_ID);
 	}
 	catch (const GB_Exception &exception)
 	{
@@ -80,6 +81,16 @@ GB_Enum::gbResult Initialize()
 
 	if (load())
 		throw GB_Exception(ERR_G_LOAD_STR, ERR_G_LOAD_ID);
+
+	return GB_Enum::GB_OK;
+}
+
+GB_Enum::gbResult Exit()
+{
+	GB_LINFO("Exit application");
+
+	//if (unload())
+	//	throw GB_Exception(ERR_G_EXIT_STR, ERR_G_EXIT_ID);
 
 	return GB_Enum::GB_OK;
 }
