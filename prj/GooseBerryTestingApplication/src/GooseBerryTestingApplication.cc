@@ -73,3 +73,13 @@ int WINAPI WinMain(HINSTANCE h_instance, HINSTANCE h_prev_instance, PSTR cmd_lin
 	return 0;
 }
 
+GB_Enum::gbResult Initialize()
+{
+	GB_LINFO("Initialize application");
+	g_open_gl.StartWnd();
+
+	if (load())
+		throw GB_Exception(ERR_G_LOAD_STR, ERR_G_LOAD_ID);
+
+	return GB_Enum::GB_OK;
+}
