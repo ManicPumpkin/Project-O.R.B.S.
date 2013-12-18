@@ -83,3 +83,12 @@ GB_Enum::gbResult Initialize()
 
 	return GB_Enum::GB_OK;
 }
+
+GB_Enum::gbResult load()
+{
+	GB_LDEBUG("Load game");
+
+	//	load some stuff here ...
+
+	return GB_Enum::GB_OK;
+}
