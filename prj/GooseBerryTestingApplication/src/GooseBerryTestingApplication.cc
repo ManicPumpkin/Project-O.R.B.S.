@@ -79,7 +79,7 @@ GB_Enum::gbResult Initialize()
 	GB_LINFO("Initialize application");
 	g_open_gl.StartWnd();
 
-	if (load())
+	if (Load())
 		throw GB_Exception(ERR_G_LOAD_STR, ERR_G_LOAD_ID);
 
 	return GB_Enum::GB_OK;
@@ -89,13 +89,13 @@ GB_Enum::gbResult Exit()
 {
 	GB_LINFO("Exit application");
 
-	if (unload())
+	if (Unload())
 		throw GB_Exception(ERR_G_EXIT_STR, ERR_G_EXIT_ID);
 
 	return GB_Enum::GB_OK;
 }
 
-GB_Enum::gbResult load()
+GB_Enum::gbResult Load()
 {
 	GB_LDEBUG("Load application");
 
@@ -104,11 +104,15 @@ GB_Enum::gbResult load()
 	return GB_Enum::GB_OK;
 }
 
-GB_Enum::gbResult unload()
+GB_Enum::gbResult Unload()
 {
 	GB_LDEBUG("Unload application");
 
 	//	unload some stuff here ...
 
 	return GB_Enum::GB_OK;
+}
+
+GB_Enum::gbResult Show()
+{
 }
