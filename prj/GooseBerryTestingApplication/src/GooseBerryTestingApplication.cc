@@ -143,7 +143,8 @@ GB_Enum::gbResult Run()
 {
 	LOG_INFO("Run application");
 
-	//	enter message loop
+	if (GB_Func::MessageLoop(&::Render))
+		LOG_ERROR(ERR_GB_MSGL_STR, ERR_GB_MSGL_ID);
 
 	return GB_Enum::GB_OK;
 }

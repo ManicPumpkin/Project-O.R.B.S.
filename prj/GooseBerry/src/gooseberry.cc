@@ -77,7 +77,7 @@ GOOSEBERRY_API GB_Enum::gbResult GB_Func::Initialize()
 	@brief	Enter message loop
 **/
 //==================================================================
-GOOSEBERRY_API GB_Enum::gbResult MessageLoop(GB_Enum::gbResult(*pRender)(float))
+GOOSEBERRY_API GB_Enum::gbResult MessageLoop(GB_Enum::gbResult(*Render)(float))
 {
 	MSG			msg;
 	LONGLONG	start_time	= 0.0f;
@@ -109,7 +109,7 @@ GOOSEBERRY_API GB_Enum::gbResult MessageLoop(GB_Enum::gbResult(*pRender)(float))
 				quit	= TRUE;
 			else
 			{
-				pRender((float)time);
+				Render((float)time);
 				SwapBuffers(GB_Var::g_hdc);
 			}
 		}
