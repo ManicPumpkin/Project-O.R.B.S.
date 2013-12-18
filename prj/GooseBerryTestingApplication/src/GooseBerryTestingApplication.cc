@@ -23,7 +23,8 @@ using namespace std;
 //==================================================================
 //	GLOBALS
 //==================================================================
-GB_OpenGL g_open_gl;
+GB_OpenGL	g_open_gl;
+bool		g_render_init = FALSE;
 
 //==================================================================
 //	MAIN
@@ -128,6 +129,20 @@ GB_Enum::gbResult Run()
 	GB_LINFO("Run application");
 
 	//	enter message loop
+
+	return GB_Enum::GB_OK;
+}
+
+GB_Enum::gbResult Render(float time)
+{
+	if (!g_render_init)
+	{
+		g_render_init = TRUE;
+		GB_LDEBUG("Start render process");
+	}
+
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glLoadIdentity();
 
 	return GB_Enum::GB_OK;
 }
