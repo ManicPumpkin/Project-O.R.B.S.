@@ -113,6 +113,12 @@ GB_Enum::gbResult Unload()
 	return GB_Enum::GB_OK;
 }
 
-GB_Enum::gbResult Show()
+GB_Enum::gbResult Show(HWND hwnd)
 {
+	GB_LDEBUG("Showing window");
+	ShowWindow(hwnd, SW_SHOW);
+	SetForegroundWindow(hwnd);
+	SetFocus(hwnd);
+	
+	return GB_Enum::GB_OK;
 }
