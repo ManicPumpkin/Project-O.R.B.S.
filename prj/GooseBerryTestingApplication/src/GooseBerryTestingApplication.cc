@@ -122,3 +122,12 @@ GB_Enum::gbResult Show(HWND hwnd)
 	
 	return GB_Enum::GB_OK;
 }
+
+GB_Enum::gbResult Run()
+{
+	GB_LINFO("Run application");
+
+	//	enter message loop
+
+	return GB_Enum::GB_OK;
+}
