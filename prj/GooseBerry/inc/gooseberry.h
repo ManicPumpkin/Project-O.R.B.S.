@@ -61,9 +61,9 @@ using namespace std;
 namespace GB_Var
 {
 	GOOSEBERRY_API extern HINSTANCE		g_hinstance;	//!< instance of program
-	GOOSEBERRY_API extern HWND			g_HWND;			//!< handle to window
-	GOOSEBERRY_API extern HDC			g_HDC;			//!< device context
-	GOOSEBERRY_API extern HGLRC			g_HGLRC;		//!< render context
+	GOOSEBERRY_API extern HWND			g_hwnd;			//!< handle to window
+	GOOSEBERRY_API extern HDC			g_hdc;			//!< device context
+	GOOSEBERRY_API extern HGLRC			g_hglrc;		//!< render context
 	GOOSEBERRY_API extern LPCSTR		g_wnd_title;	//!< title of window
 	GOOSEBERRY_API extern LPCSTR		g_wnd_name;		//!< name of window
 	GOOSEBERRY_API extern int			g_wnd_width;	//!< window width

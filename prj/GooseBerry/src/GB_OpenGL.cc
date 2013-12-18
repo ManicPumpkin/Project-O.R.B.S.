@@ -127,9 +127,9 @@ GB_Enum::gbResult GB_OpenGL :: ExitWnd()
 {
 	GB_LDEBUG("Close and destroy GB_OpenGL window");
 	wglMakeCurrent(NULL, NULL);
-	ReleaseDC(GB_Var::g_HWND, GB_Var::g_HDC);
-	wglDeleteContext(GB_Var::g_HGLRC);
-	DestroyWindow(GB_Var::g_HWND);
+	ReleaseDC(GB_Var::g_hwnd, GB_Var::g_hdc);
+	wglDeleteContext(GB_Var::g_hglrc);
+	DestroyWindow(GB_Var::g_hwnd);
 	return GB_Enum::GB_OK;
 }
 
@@ -228,12 +228,12 @@ GB_Enum::gbResult GB_OpenGL :: FullscreenWnd()
 GB_Enum::gbResult GB_OpenGL :: CreateGB_OpenGLWnd()
 {
 	GB_LDEBUG("Create window");
-	GB_Var::g_HWND	= CreateWindowEx( dw_ex_style_, GB_Var::g_wnd_name, GB_Var::g_wnd_title, 
+	GB_Var::g_hwnd	= CreateWindowEx( dw_ex_style_, GB_Var::g_wnd_name, GB_Var::g_wnd_title, 
 		dw_style_ | WS_HSCROLL | WS_VSCROLL | WS_OVERLAPPEDWINDOW,
 		GB_Var::g_wnd_x, GB_Var::g_wnd_y, GB_Var::g_wnd_width, GB_Var::g_wnd_height, 
 		NULL, NULL, GB_Var::g_hinstance, NULL );
 
-	if(GB_Var::g_HWND == NULL)
+	if(GB_Var::g_hwnd == NULL)
 		throw GB_Exception(ERR_WIN_WND_STR, ERR_WIN_WND_ID);
 
 	return GB_Enum::GB_OK;
@@ -248,7 +248,7 @@ GB_Enum::gbResult GB_OpenGL :: CreateGB_OpenGLWnd()
 GB_Enum::gbResult GB_OpenGL :: EnableGB_OpenGL()
 {
 	GB_LDEBUG("Enable GB_OpenGL for window");
-	GB_Var::g_HDC	= GetDC((HWND)GB_Var::g_HWND);
+	GB_Var::g_hdc	= GetDC((HWND)GB_Var::g_hwnd);
 	
 	PIXELFORMATDESCRIPTOR pfd;
 	ZeroMemory(&pfd, sizeof(PIXELFORMATDESCRIPTOR));
@@ -261,18 +261,18 @@ GB_Enum::gbResult GB_OpenGL :: EnableGB_OpenGL()
 	pfd.cAlphaBits	= GB_Var::g_bits_alpha;
 	pfd.iLayerType	= PFD_MAIN_PLANE;
 	
-	int format		= ChoosePixelFormat(GB_Var::g_HDC, &pfd);
-	if(!SetPixelFormat(GB_Var::g_HDC, format, &pfd))
+	int format		= ChoosePixelFormat(GB_Var::g_hdc, &pfd);
+	if(!SetPixelFormat(GB_Var::g_hdc, format, &pfd))
 		throw GB_Exception(ERR_GL_SPF_STR, ERR_GL_SPF_ID);
 
-	if(!(GB_Var::g_HGLRC = wglCreateContext(GB_Var::g_HDC)))
+	if(!(GB_Var::g_hglrc = wglCreateContext(GB_Var::g_hdc)))
 		throw GB_Exception(ERR_GL_HRC_STR, ERR_GL_HRC_ID);
 	
-	if(!wglMakeCurrent(GB_Var::g_HDC, GB_Var::g_HGLRC))
+	if(!wglMakeCurrent(GB_Var::g_hdc, GB_Var::g_hglrc))
 		throw GB_Exception(ERR_GL_HDRC_STR, ERR_GL_HDRC_ID);
 
-	DescribePixelFormat(GB_Var::g_HDC, format, sizeof(PIXELFORMATDESCRIPTOR), &pfd);
-	ReleaseDC(GB_Var::g_HWND, GB_Var::g_HDC);
+	DescribePixelFormat(GB_Var::g_hdc, format, sizeof(PIXELFORMATDESCRIPTOR), &pfd);
+	ReleaseDC(GB_Var::g_hwnd, GB_Var::g_hdc);
 
 	return GB_Enum::GB_OK;
 }

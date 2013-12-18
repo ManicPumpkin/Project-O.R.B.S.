@@ -36,9 +36,9 @@ using namespace GB_Enum;
 //	VARIABLES
 //==================================================================
 HINSTANCE	GB_Var::g_hinstance = NULL;
-HWND		GB_Var::g_HWND = NULL;
-HDC			GB_Var::g_HDC = NULL;
-HGLRC		GB_Var::g_HGLRC = NULL;
+HWND		GB_Var::g_hwnd = NULL;
+HDC			GB_Var::g_hdc = NULL;
+HGLRC		GB_Var::g_hglrc = NULL;
 LPCSTR		GB_Var::g_wnd_title = "";
 LPCSTR		GB_Var::g_wnd_name = "";
 int			GB_Var::g_wnd_width = -1;
@@ -110,7 +110,7 @@ GOOSEBERRY_API GB_Enum::gbResult MessageLoop(GB_Enum::gbResult(*pRender)(float))
 			else
 			{
 				pRender((float)time);
-				SwapBuffers(GB_Var::g_HDC);
+				SwapBuffers(GB_Var::g_hdc);
 			}
 		}
 
