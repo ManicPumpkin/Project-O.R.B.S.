@@ -34,7 +34,7 @@
 #include <gl/GLU.h>
 #include <gl/GL.h>
 
-#include "glut.h"
+#include "..\ext\glut-3.7.6\glut.h"
 
 //==================================================================
 //	NAMESPACES
@@ -50,10 +50,10 @@ using namespace std;
 //==================================================================
 #define DEBUG_MODE				TRUE
 #define ONLY_COMPILE			FALSE
-#define GB_Log_ONCE				FALSE
-#define GB_Log_FILE				"GB_Logfile.html"
-#define GB_Log_PATH				".\\GB_Log\\"
-#define GB_Log_FILEPATH			GB_Log_PATH GB_Log_FILE
+#define LOG_ONCE				FALSE
+#define LOG_FILE				"gb_log.html"
+#define LOG_PATH				".\\log\\"
+#define LOG_FILEPATH			LOG_PATH LOG_FILE
 
 //==================================================================
 //	GLOBALS
@@ -138,7 +138,7 @@ namespace GB_Func
 //==================================================================
 #include "GB_Exception.h"
 #include "GB_Errors.h"
-#include "GB_Log.h"
+#include "GB_Log.h"	
 #include "GB_Convert.h"
 #include "GB_Array.h"
 #include "GB_Matrix.h"

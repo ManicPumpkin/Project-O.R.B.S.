@@ -29,7 +29,7 @@
 GOOSEBERRY_API GB_Enum::gbResult StopLog()
 {
 	std::ofstream file_stream;
-	file_stream.open(GB_Log_FILEPATH, std::fstream::in | std::fstream::app);
+	file_stream.open(LOG_FILEPATH, std::fstream::in | std::fstream::app);
 	
 	if(file_stream.is_open())
 		file_stream << "</table></html></head>\n";
@@ -49,7 +49,7 @@ GOOSEBERRY_API GB_Enum::gbResult StopLog()
 GOOSEBERRY_API GB_Enum::gbResult Log(std::string msg)
 {
 	std::ofstream file_stream;
-	file_stream.open(GB_Log_FILEPATH, std::fstream::in | std::fstream::app);
+	file_stream.open(LOG_FILEPATH, std::fstream::in | std::fstream::app);
 
 	if(file_stream.is_open())
 		file_stream << "<tr><th>" << CurrentTime() << "</th>" << msg;
@@ -68,14 +68,14 @@ GOOSEBERRY_API GB_Enum::gbResult Log(std::string msg)
 GOOSEBERRY_API GB_Enum::gbResult InitializeLog()
 {
 	std::ofstream file_stream;
-	CreateDirectory(GB_Log_PATH, NULL);
-	file_stream.open(GB_Log_FILEPATH, std::fstream::trunc);
+	CreateDirectory(LOG_PATH, NULL);
+	file_stream.open(LOG_FILEPATH, std::fstream::trunc);
 	
 	if(file_stream.is_open())
 	{
 		file_stream << "<html><head>\n";
-		file_stream << "<title>" << GB_Var::g_wnd_title << "-GB_Log</title>\n";
-		file_stream << "<link rel=\"stylesheet\" href=\"GB_Logfile.css\">\n";
+		file_stream << "<title>" << GB_Var::g_wnd_title << "-Logfile</title>\n";
+		file_stream << "<link rel=\"stylesheet\" href=\"logfile.css\">\n";
 		file_stream << "</head><body>\n";
 		file_stream << "<hr class=\"divide_double\" />\n";
 		file_stream << "<p id=\"header\">"<< GB_Var::g_wnd_title <<" - GB_Logfile</p>\n";

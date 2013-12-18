@@ -20,6 +20,9 @@
 *Debug/
 *.opensdf
 
+# Unnecessary Log Files
+*.log
+
 # LaTex files
 *.aux
 *.toc

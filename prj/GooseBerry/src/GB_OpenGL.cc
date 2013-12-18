@@ -109,7 +109,7 @@ GB_Enum::gbResult GB_OpenGL :: StartWnd()
 	catch(const GB_Exception &tGB_Exception)
 	{
 		GB_LERROR(tGB_Exception.GetStr(), tGB_Exception.GetId());
-		GB_MSGBOXERR(tGB_Exception.GetStr(), tGB_Exception.GetId());
+		// GB_MSGBOXERR(tGB_Exception.GetStr(), tGB_Exception.GetId());
 		return GB_Enum::GB_STOP;
 	}
 

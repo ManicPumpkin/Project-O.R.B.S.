@@ -33,7 +33,7 @@ GB_MeshQueue :: GB_MeshQueue()
 //==================================================================
 VOID GB_MeshQueue::AddModel(GB_Mesh model)
 {
-	GB_LINFO("Model \"" +  model.obj_name_ + "\" added to queue");
+	GB_LINFO("Model \"" + model.obj_name_ + "\" added to queue");
 	model_queue_.push_back(model);
 }
 //==================================================================				
@@ -88,7 +88,7 @@ BOOL GB_MeshQueue :: RemoveModelByFile(std::string file_name)
 		@brief	Returns GB_Enum::gbResult
 		@param	mdl	mesh of GB_Object, call by reference
 		@param	id		model id
-		@return	GB_Enum::gbResult	gb_ok or gb_error
+		@return	GB_Enum::gbResult	gb_ok or GB_LERROR
 **/
 //==================================================================
 GB_Enum::gbResult GB_MeshQueue::GetMdlCyByID(GB_Mesh * mdl, unsigned int id)

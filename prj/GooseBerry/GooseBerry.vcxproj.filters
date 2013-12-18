@@ -63,9 +63,6 @@
     <ClInclude Include="inc\GB_Exception.h">
       <Filter>Headerdateien\help</Filter>
     </ClInclude>
-    <ClInclude Include="inc\GB_Log.h">
-      <Filter>Headerdateien\help</Filter>
-    </ClInclude>
     <ClInclude Include="inc\GB_Object.h">
       <Filter>Headerdateien\help</Filter>
     </ClInclude>
@@ -87,15 +84,15 @@
     <ClInclude Include="inc\GB_OpenGL.h">
       <Filter>Headerdateien\graphic</Filter>
     </ClInclude>
+    <ClInclude Include="inc\GB_Log.h">
+      <Filter>Headerdateien\help</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\gooseberry.cc">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="src\GB_Color.cc">
-      <Filter>Quelldateien\help</Filter>
-    </ClCompile>
-    <ClCompile Include="src\GB_Log.cc">
       <Filter>Quelldateien\help</Filter>
     </ClCompile>
     <ClCompile Include="src\GB_MeshQueue.cc">
@@ -124,6 +121,9 @@
     </ClCompile>
     <ClCompile Include="src\GB_OpenGL.cc">
       <Filter>Quelldateien\graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GB_Log.cc">
+      <Filter>Quelldateien\help</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
