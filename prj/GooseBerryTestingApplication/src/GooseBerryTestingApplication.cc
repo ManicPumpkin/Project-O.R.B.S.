@@ -21,6 +21,11 @@
 using namespace std;
 
 //==================================================================
+//	GLOBALS
+//==================================================================
+GB_OpenGL g_open_gl;
+
+//==================================================================
 //	MAIN
 //==================================================================
 int WINAPI WinMain(HINSTANCE h_instance, HINSTANCE h_prev_instance, PSTR cmd_line, int cmd_show)
@@ -43,12 +48,21 @@ int WINAPI WinMain(HINSTANCE h_instance, HINSTANCE h_prev_instance, PSTR cmd_lin
 	Log::getInstance()->debug_mode_ = true;
 	LOG_DEBUG("GooseBerryTestingApplication started");
 	LOG_DEBUG("Log system initialized succesfully");
-	getchar();
 
 	//	Start code here
-	GB_Func::Initialize();
+	try
+	{
+		GB_Func::Initialize();
 
-	GB_Func::Exit();
+
+
+		GB_Func::Exit();
+	}
+	catch (const GB_Exception &exception)
+	{
+		GB_LERROR(exception.GetStr(), exception.GetId());
+		GB_MSGBOXERR(exception.GetStr(), exception.GetId());
+	}
 
 	LOG_DEBUG("GooseBerryTestingApplication finished");
 	getchar();
@@ -58,3 +72,4 @@ int WINAPI WinMain(HINSTANCE h_instance, HINSTANCE h_prev_instance, PSTR cmd_lin
 
 	return 0;
 }
+
