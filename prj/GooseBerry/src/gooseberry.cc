@@ -77,7 +77,7 @@ GOOSEBERRY_API GB_Enum::gbResult GB_Func::Initialize()
 	@brief	Enter message loop
 **/
 //==================================================================
-GOOSEBERRY_API GB_Enum::gbResult MessageLoop(GB_Enum::gbResult(*Render)(float))
+GOOSEBERRY_API GB_Enum::gbResult GB_Func::MessageLoop(GB_Enum::gbResult(*Render)(float))
 {
 	MSG			msg;
 	LONGLONG	start_time	= 0.0f;
@@ -117,7 +117,7 @@ GOOSEBERRY_API GB_Enum::gbResult MessageLoop(GB_Enum::gbResult(*Render)(float))
 		if(GB_Var::g_keys[VK_F1])
 		{
 			GB_Var::g_keys[VK_F1]	= FALSE;
-			GB_Var::g_fullscreen	    = !GB_Var::g_fullscreen;
+			GB_Var::g_fullscreen	= !GB_Var::g_fullscreen;
 			GB_Func::Exit();
 
 			if (GB_Func::Initialize() != GB_OK)
