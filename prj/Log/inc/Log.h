@@ -35,6 +35,8 @@
 #define LOG_API __declspec(dllimport)
 #endif
 
+#pragma warning (disable:4251)
+
 //=============================================================================
 // CLASS
 //=============================================================================
@@ -70,7 +72,8 @@ protected:
 
 public:
   ~Log();
-  inline static Log* getInstance();
+  //inline static Log* getInstance() { if (instance_ == NULL) { instance_ = new Log(); } return instance_; }
+  static Log* getInstance();
   inline void set_file_path_and_name(std::string &path, std::string &file_name);
   inline bool LOG_DEBUG(std::string msg);
   inline bool LOG_INFO(std::string msg);

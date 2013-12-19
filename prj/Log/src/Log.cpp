@@ -85,7 +85,7 @@ Log::~Log() {
   @return Pointer to a singleton Log instance.
 **/
 //=============================================================================
-Log* Log::getInstance() {
+inline Log* Log::getInstance() {
   if(instance_ == NULL) {
     instance_ = new Log();
   }
