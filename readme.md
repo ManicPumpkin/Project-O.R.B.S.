@@ -17,3 +17,12 @@ Autors
 -	RUBNER,		Danny
 
 © Copyright 2013. All rights reserved by Wilhelm, Marco and Rubner, Danny.
+
+Programs and files used
+=======================
+
+LibPNG
+http://sourceforge.net/projects/gnuwin32/files/libpng/1.2.37/
+
+GLUT
+http://www.opengl.org/resources/libraries/glut/
