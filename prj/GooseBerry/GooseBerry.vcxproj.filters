@@ -87,6 +87,9 @@
     <ClInclude Include="inc\GB_Log.h">
       <Filter>Headerdateien\help</Filter>
     </ClInclude>
+    <ClInclude Include="inc\GB_PngLoader.h">
+      <Filter>Headerdateien\graphic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\gooseberry.cc">
