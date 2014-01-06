@@ -22,4 +22,5 @@ Programs and files used
 =======================
 
 - LibPNG http://sourceforge.net/projects/gnuwin32/files/libpng/1.2.37/
+- ZLib http://gnuwin32.sourceforge.net/packages/zlib.htm
 - GLUT http://www.opengl.org/resources/libraries/glut/
