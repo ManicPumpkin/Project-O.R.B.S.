@@ -33,7 +33,7 @@ GB_Enum::gbResult LoadPngImage(char *name, int &outer_width, int &outer_height, 
 		fclose(file_ptr);
 		return GB_Enum::GB_ERROR;
 	}
-
+	
 	info_ptr = png_create_info_struct(png_ptr);
 	if (info_ptr == NULL)
 	{

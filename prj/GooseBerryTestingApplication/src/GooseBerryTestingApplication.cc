@@ -100,6 +100,14 @@ GB_Enum::gbResult Initialize()
 	LOG_INFO("Initialize application");
 	g_open_gl.StartWnd();
 
+	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	//glEnable(GL_BLEND);
+	glShadeModel(GL_SMOOTH);
+	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0);
+	glEnable(GL_DEPTH_TEST);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 	if (Load())
 		throw GB_Exception(ERR_G_LOAD_STR, ERR_G_LOAD_ID);
 
@@ -116,11 +124,18 @@ GB_Enum::gbResult Exit()
 	return GB_Enum::GB_OK;
 }
 
+GLuint texture;
+
 GB_Enum::gbResult Load()
 {
 	LOG_DEBUG("Load application");
 
-	//	load some stuff here ...
+	//	load some stuff starts here ...
+	
+	LOG_DEBUG("Starting loading texture");
+	texture = LoadTextureGB("texture.raw", 256, 256);
+
+	//	... and ends here
 
 	return GB_Enum::GB_OK;
 }
@@ -129,7 +144,9 @@ GB_Enum::gbResult Unload()
 {
 	LOG_DEBUG("Unload application");
 
-	//	unload some stuff here ...
+	//	unload some stuff starts here ...
+
+	//	... and ends up here.
 
 	return GB_Enum::GB_OK;
 }
@@ -162,8 +179,35 @@ GB_Enum::gbResult Render(float time)
 		LOG_DEBUG("Start render process");
 	}
 
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	//	Render stuff starts here ...
+	Sleep(1 / 50.0f);
+
+	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
+	gluPerspective(60, 1, 1, 10);
+	gluLookAt(0, 0, -2, 0, 0, 2, 0, 1, 0);
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glPushAttrib(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glEnable(GL_TEXTURE_2D);
+
+	glBegin(GL_QUADS);
+	glNormal3f(0.0, 0.0, 1.0);
+	glTexCoord2d(1, 1); glVertex3f(0.0, 0.0, 0.0);
+	glTexCoord2d(1, 0); glVertex3f(0.0, 1.0, 0.0);
+	glTexCoord2d(0, 1); glVertex3f(1.0, 1.0, 0.0);	
+	glTexCoord2d(1, 1); glVertex3f(1.0, 0.0, 0.0);
+	glEnd();
+
+	glDisable(GL_TEXTURE_2D);
+	glPopAttrib();
+	glFlush();
+	//glutSwapBuffers();
+
+	//	... and ends here.
 
 	return GB_Enum::GB_OK;
 }

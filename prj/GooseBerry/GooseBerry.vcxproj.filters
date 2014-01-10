@@ -87,7 +87,7 @@
     <ClInclude Include="inc\GB_Log.h">
       <Filter>Headerdateien\help</Filter>
     </ClInclude>
-    <ClInclude Include="inc\GB_PngLoader.h">
+    <ClInclude Include="inc\GB_TexLoader.h">
       <Filter>Headerdateien\graphic</Filter>
     </ClInclude>
   </ItemGroup>
@@ -127,6 +127,9 @@
     </ClCompile>
     <ClCompile Include="src\GB_Log.cc">
       <Filter>Quelldateien\help</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GB_TexLoader.cc">
+      <Filter>Quelldateien\graphic</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
