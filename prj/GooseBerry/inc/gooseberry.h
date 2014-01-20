@@ -18,6 +18,7 @@
 #pragma comment(lib, "opengl32.lib")
 #pragma comment(lib, "glut32.lib")
 #pragma comment(lib, "glu32.lib")
+#pragma comment(lib, "libpng16.lib")
 
 //==================================================================
 //	INCLUDE
@@ -34,7 +35,10 @@
 #include <gl/GLU.h>
 #include <gl/GL.h>
 
+//	EXTERN LIBRARIES
 #include "..\ext\glut-3.7.6\glut.h"
+//#include "..\ext\libpng-1.6.8\png.h"
+
 
 //==================================================================
 //	NAMESPACES
@@ -146,8 +150,7 @@ namespace GB_Func
 #include "GB_Vector2.h"
 #include "GB_Color.h"
 #include "GB_OpenGL.h"
-//#include "GB_PngLoader.h"
-#include "GB_TexLoader.h"
+#include "GB_PngLoader.h"
 #include "GB_Material.h"
 #include "GB_Tex.h"
 #include "GB_Mesh.h"
