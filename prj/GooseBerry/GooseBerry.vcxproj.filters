@@ -90,6 +90,9 @@
     <ClInclude Include="inc\GB_TexLoader.h">
       <Filter>Headerdateien\graphic</Filter>
     </ClInclude>
+    <ClInclude Include="inc\GB_PngLoader.h">
+      <Filter>Headerdateien\graphic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\gooseberry.cc">
@@ -129,6 +132,9 @@
       <Filter>Quelldateien\help</Filter>
     </ClCompile>
     <ClCompile Include="src\GB_TexLoader.cc">
+      <Filter>Quelldateien\graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GB_PngLoader.cc">
       <Filter>Quelldateien\graphic</Filter>
     </ClCompile>
   </ItemGroup>

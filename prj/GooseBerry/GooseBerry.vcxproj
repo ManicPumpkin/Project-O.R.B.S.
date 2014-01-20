@@ -41,8 +41,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>.\ext\glut-3.7.6\;.\ext\libpng-1.2.37\include\;.\ext\zlib-1.2.3\include\;.\inc\;$(IncludePath)</IncludePath>
-    <LibraryPath>.\ext\glut-3.7.6\;.\ext\libpng-1.2.37\lib\;.\ext\zlib-1.2.3\lib\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <IncludePath>.\ext\libpng-1.6.8\;.\ext\glut-3.7.6\;.\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>.\ext\libpng-1.6.8\;.\ext\glut-3.7.6\;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+    <SourcePath>$(VC_SourcePath);</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -92,6 +93,7 @@
     <ClInclude Include="inc\GB_MeshQueue.h" />
     <ClInclude Include="inc\GB_Object.h" />
     <ClInclude Include="inc\GB_OpenGL.h" />
+    <ClInclude Include="inc\GB_PngLoader.h" />
     <ClInclude Include="inc\GB_Tex.h" />
     <ClInclude Include="inc\GB_TexLoader.h" />
     <ClInclude Include="inc\GB_Vector2.h" />
@@ -107,6 +109,7 @@
     <ClCompile Include="src\GB_MeshQueue.cc" />
     <ClCompile Include="src\GB_Object.cc" />
     <ClCompile Include="src\GB_OpenGL.cc" />
+    <ClCompile Include="src\GB_PngLoader.cc" />
     <ClCompile Include="src\GB_Tex.cc" />
     <ClCompile Include="src\GB_TexLoader.cc" />
     <ClCompile Include="src\GB_Vector2.cc" />
