@@ -131,11 +131,10 @@ GB_Enum::gbResult Load()
 	LOG_DEBUG("Load application");
 
 	//	load some stuff starts here ...
-	
 	LOG_DEBUG("Starting loading texture");
-	texture = LoadTextureGB("texture.raw", 256, 256);
-
-	//	... and ends here
+	GLubyte **out_data;
+	int width, height;
+	LoadPngImage(".\\dta\\pnglogo.png", &width, &height, &texture);
 
 	return GB_Enum::GB_OK;
 }
@@ -145,7 +144,6 @@ GB_Enum::gbResult Unload()
 	LOG_DEBUG("Unload application");
 
 	//	unload some stuff starts here ...
-
 	//	... and ends up here.
 
 	return GB_Enum::GB_OK;
@@ -194,6 +192,7 @@ GB_Enum::gbResult Render(float time)
 	glPushAttrib(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_TEXTURE_2D);
 
+	glTranslatef(-0.5f, -0.5f, 0.0f);
 	glBegin(GL_QUADS);
 	glNormal3f(0.0, 0.0, 1.0);
 	glTexCoord2d(1, 1); glVertex3f(0.0, 0.0, 0.0);
