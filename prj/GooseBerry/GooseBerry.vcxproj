@@ -95,7 +95,6 @@
     <ClInclude Include="inc\GB_OpenGL.h" />
     <ClInclude Include="inc\GB_PngLoader.h" />
     <ClInclude Include="inc\GB_Tex.h" />
-    <ClInclude Include="inc\GB_TexLoader.h" />
     <ClInclude Include="inc\GB_Vector2.h" />
     <ClInclude Include="inc\GB_Vector3.h" />
     <ClInclude Include="inc\gooseberry.h" />
@@ -111,7 +110,6 @@
     <ClCompile Include="src\GB_OpenGL.cc" />
     <ClCompile Include="src\GB_PngLoader.cc" />
     <ClCompile Include="src\GB_Tex.cc" />
-    <ClCompile Include="src\GB_TexLoader.cc" />
     <ClCompile Include="src\GB_Vector2.cc" />
     <ClCompile Include="src\GB_Vector3.cc" />
     <ClCompile Include="src\gooseberry.cc" />
