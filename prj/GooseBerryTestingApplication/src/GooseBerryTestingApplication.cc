@@ -131,8 +131,7 @@ GB_Enum::gbResult Load()
 	LOG_DEBUG("Load application");
 
 	//	load some stuff starts here ...
-	LOG_DEBUG("Starting loading texture");
-	GLubyte **out_data;
+	LOG_DEBUG("Starting loading textures");
 	int width, height;
 	LoadPngImage(".\\dta\\pnglogo.png", &width, &height, &texture);
 
@@ -189,20 +188,18 @@ GB_Enum::gbResult Render(float time)
 	glLoadIdentity();
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glPushAttrib(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glEnable(GL_TEXTURE_2D);
 
 	glTranslatef(-0.5f, -0.5f, 0.0f);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glBegin(GL_QUADS);
-	glNormal3f(0.0, 0.0, 1.0);
-	glTexCoord2d(1, 1); glVertex3f(0.0, 0.0, 0.0);
-	glTexCoord2d(1, 0); glVertex3f(0.0, 1.0, 0.0);
-	glTexCoord2d(0, 1); glVertex3f(1.0, 1.0, 0.0);	
-	glTexCoord2d(1, 1); glVertex3f(1.0, 0.0, 0.0);
+	glTexCoord2d(0, 0); glVertex3f(1.0, 0.0, 0.0);
+	glTexCoord2d(0, 1); glVertex3f(1.0, 1.0, 0.0);
+	glTexCoord2d(1, 1); glVertex3f(0.0, 1.0, 0.0);	
+	glTexCoord2d(1, 0); glVertex3f(0.0, 0.0, 0.0);
 	glEnd();
 
 	glDisable(GL_TEXTURE_2D);
-	glPopAttrib();
 	glFlush();
 	//glutSwapBuffers();
 
