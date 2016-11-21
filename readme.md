@@ -13,7 +13,6 @@ O.R.B.S. based on the GooseBerry Engine
 Autors
 ======
 
--	WILHELM,	Marco
 -	RUBNER,		Danny
 
-© Copyright 2013. All rights reserved by Wilhelm, Marco and Rubner, Danny.
+© Copyright 2013. All rights reserved by Rubner, Danny.
