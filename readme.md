@@ -15,4 +15,4 @@ Autors
 
 -	RUBNER,		Danny
 
-© Copyright 2013. All rights reserved by Rubner, Danny.
+© Copyright 2016. All rights reserved by Rubner, Danny.
